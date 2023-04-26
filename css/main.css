@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --Black: #080708;
     --Sand: #FCFF6C;
@@ -6,4 +11,33 @@
     --Yellow: #FFD23F;
     --LightBlue: #99B8FF;
     --Red: #FF101F;
+}
+
+body {
+    background-color: var(--Sand);
+}
+
+/* Standaard elementen */
+h1 {
+    color: var(--White);
+}
+
+/* nav */
+nav {
+    width: 100vw;
+    height: 16vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > * {
+    width: 50%;
+    text-align: center;
+}
+
+#nav-svg {
+    position: fixed;
+    z-index: -1;
 }
