@@ -55,3 +55,24 @@ nav > h1 {
     justify-content: space-between;
     width: 40%;
 }
+
+/* over ons */
+.over-ons-container{
+    margin: 20px;
+    padding: 20px;
+    color: #080708;
+    background-color: #FEF9FF;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+#over-ons-titel{
+    color: #080708;
+}
+#over-to-contact-link{
+    color: #080708;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline black solid;
+}
