@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Archivo', sans-serif;
 }
 
 :root {
@@ -20,6 +21,13 @@ body {
 /* Standaard elementen */
 h1 {
     color: var(--White);
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--White);
+    font-size: 25px;
 }
 
 /* nav */
@@ -32,12 +40,18 @@ nav {
     align-items: center;
 }
 
-nav > * {
+nav > h1 {
     width: 50%;
-    text-align: center;
 }
 
 #nav-svg {
     position: fixed;
     z-index: -1;
+    transform:scaleX(200%) scaleY(200%);
+}
+
+.link-row {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
 }
