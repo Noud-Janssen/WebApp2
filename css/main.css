@@ -4,6 +4,10 @@
     font-family: 'Archivo', sans-serif;
 }
 
+body {
+    height: 300vh;
+}
+
 :root {
     --Black: #080708;
     --Sand: #FCFF6C;
@@ -12,10 +16,13 @@
     --Yellow: #FFD23F;
     --LightBlue: #99B8FF;
     --Red: #FF101F;
+
+    --shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    --shadow-yellow: #ffd23f 0px 2px 4px 0px, #ffd23f 0px 2px 6px 2px;
 }
 
 body {
-    background-color: var(--Sand);
+    background-color: var(--White);
 }
 
 /* Standaard elementen */
@@ -30,6 +37,13 @@ a {
     font-size: 25px;
 }
 
+input {
+    outline: none;
+    border: var(--Black) 2px solid;
+    border-radius: 10px;
+    background: var(--White);
+}
+
 /* nav */
 nav {
     width: 100vw;
@@ -38,6 +52,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--Blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
 }
 
 nav > h1 {
@@ -54,4 +75,89 @@ nav > h1 {
     display: flex;
     justify-content: space-between;
     width: 40%;
+}
+
+/* homepage */
+
+.banner {
+    background-color: var(--LightBlue);
+    background-image: url("../assets/images/boot.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 400px;
+
+    position: absolute;
+    top: 16vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: var(--shadow);
+}
+
+.searchbalk {
+    width: 80%;
+    height: 100px;
+    margin-left: 10%;
+    margin-top: 300px;
+
+    background: var(--White);
+    
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    outline: 5px solid var(--Yellow);
+    /*box-shadow: var(--shadow-yellow);*/
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 16vh;
+}
+
+.searchbalk.isSticky{
+    width: 100%;
+    margin-left: 0%;
+}
+
+.searchbalk > * {
+    height: 80%;
+    margin-left: 1%;
+    font-size: 20px;
+}
+
+#landform {
+    width: 30%;
+    text-align: center;
+}
+
+#zoek-knop {
+    width: 10%;
+    cursor: pointer;
+
+}
+
+.vertrekdatum {
+    aspect-ratio: 1 / 1;
+}
+
+/* advertenties */
+.advertentieWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12%;
+    width: 76%;
+}
+
+.advertentie {
+    width: 48%;
+    min-width: 400px;
+    max-width: 800px;
+    height: 400px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
 }

@@ -14,5 +14,23 @@
     <?php 
         require_once('php/nav.php')
     ?>
+    <div class="banner">
+    </div>
+    <form class="searchbalk">
+        <input type="text" name="land" id="landform">
+        <input type="date" name="vertrekdatum" class="vertrekdatum" id="vertrek-datum">
+        <input type="date" name="terugkomstdatum" class="vertrekdatum" id="aankomst-datum">
+        <input type="submit" value="zoek" id="zoek-knop">
+    </form>
+    <div class="advertentieWrapper">
+        <?php 
+            for ($i = 0; $i < 100 ; $i++) {
+                echo '<div class="advertentie">
+
+                </div>';
+            }
+        ?>
+        
+    </div>
 </body>
 </html>
