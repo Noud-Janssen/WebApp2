@@ -26,6 +26,14 @@
         <?php 
             for ($i = 0; $i < 100 ; $i++) {
                 echo '<div class="advertentie">
+                    <div class="adBanner">
+                    </div>
+                    <div class="titelRow">
+                        <h3>Noorwegen</h3>
+                        <h3>€900,-</h3>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse quo minus praesentium totam, assumenda obcaecati, dolorem, distinctio voluptates explicabo nisi numquam! Veniam a eius magnam beatae quia amet corrupti!</p>
+                    <a href="link">Meer Informatie</a>
 
                 </div>';
             }

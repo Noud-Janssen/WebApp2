@@ -4,10 +4,6 @@
     font-family: 'Archivo', sans-serif;
 }
 
-body {
-    height: 300vh;
-}
-
 :root {
     --Black: #080708;
     --Sand: #FCFF6C;
@@ -47,7 +43,7 @@ input {
 /* nav */
 nav {
     width: 100vw;
-    height: 16vh;
+    height: 12vh;
 
     display: flex;
     justify-content: center;
@@ -88,7 +84,7 @@ nav > h1 {
     height: 400px;
 
     position: absolute;
-    top: 16vh;
+    top: 12vh;
 
     display: flex;
     justify-content: center;
@@ -101,7 +97,7 @@ nav > h1 {
     width: 80%;
     height: 100px;
     margin-left: 10%;
-    margin-top: 300px;
+    margin-top: 250px;
 
     background: var(--White);
     
@@ -115,7 +111,7 @@ nav > h1 {
 
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 16vh;
+    top: 12vh;
 }
 
 .searchbalk.isSticky{
@@ -181,4 +177,34 @@ nav > h1 {
     font-size: 20px;
     font-weight: bold;
     text-decoration: underline black solid;
+}
+.adBanner {
+    width: 100%;
+    height: 35%;
+    background-image: url(../assets/images/boot.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.advertentie > .titelRow {
+    width: 80%;
+    margin-left: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.advertentie > p {
+    width: 80%;
+    margin-left: 10%;
+    height: 45%;
+}
+
+.advertentie > a {
+    width: 80%;
+    margin-left: 10%;
+    height: 10%;
+    color: var(--Blue);
+    font-size: 14px;
 }

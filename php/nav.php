@@ -3,9 +3,9 @@
         EuropaPlus    
     </h1>
     <div class="link-row">
-        <a href="">Home</a>
-        <a href="">Over ons</a>
-        <a href="">Contact</a>
-        <a href="">Login</a>
+        <a href="index.php">Home</a>
+        <a href="over-ons.php">Over ons</a>
+        <a href="contact.php">Contact</a>
+        <a href="login.php">Login</a>
     </div>
 </nav>
