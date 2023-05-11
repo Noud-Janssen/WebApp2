@@ -16,6 +16,18 @@
     <?php
     require_once('php/nav.php')
     ?>
+    <div class="contact-bg-img">
+        <div class="contact-container">
+            <form method="post" action="feedback-contact.php">
+                <h3>E-Mail:</h3><input type="text" name="Naam">
+                <h3>Onderwerp:</h3><input type="text" name="omschrijving">
+                <h3>Text:</h3><textarea name="" id="" cols="90" rows="20"></textarea>
+                <button type="submit" name="submit_button">submit</button>
+            </form>
+        </div>
+    </div>
+
+
 </body>
 
 </html>

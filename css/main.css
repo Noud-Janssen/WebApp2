@@ -253,3 +253,36 @@ nav > h1 {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
 }
+
+/* contact */
+.contact-container{
+    padding: 2vh;
+    color: #080708;
+    background-color: #fef9ffb1;
+    height: 84vh;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12vh;
+}
+.contact-bg-img{
+    background: url(../assets/images/strand.jpeg);
+    background-size: cover;
+}
+.feedback-contact-container{
+    padding: 2vh;
+    color: #080708;
+    background-color: #fef9ffb1;
+    height: 84vh;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12vh;
+}
+.feedback-contact-bg-img{
+    background: url(../assets/images/strand.jpeg);
+    background-size: cover;
+}
+#feedback-contact-titel{
+    color: #080708;
+}
