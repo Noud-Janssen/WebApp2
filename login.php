@@ -16,6 +16,14 @@
     <?php
     require_once('php/nav.php')
     ?>
-</body>
-
+</body style="">
+    <form action="post" id="loginForm">
+        <h2>E-mail</h2>
+        <input type="text" name="email" id="">
+        <h2>Password</h2>
+        <input type="password" name="password" id="">
+        <h2></h2>
+        <input type="submit" value="login">
+        <a href="">Maak account</a>
+    </form>
 </html>
