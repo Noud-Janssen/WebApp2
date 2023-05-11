@@ -57,14 +57,14 @@ nav {
     z-index: 10;
 }
 
-nav > h1 {
+nav>h1 {
     width: 50%;
 }
 
 #nav-svg {
     position: fixed;
     z-index: -1;
-    transform:scaleX(200%) scaleY(200%);
+    transform: scaleX(200%) scaleY(200%);
 }
 
 .link-row {
@@ -100,7 +100,7 @@ nav > h1 {
     margin-top: 250px;
 
     background: var(--White);
-    
+
 
     display: flex;
     justify-content: flex-start;
@@ -109,17 +109,18 @@ nav > h1 {
     outline: 5px solid var(--Yellow);
     /*box-shadow: var(--shadow-yellow);*/
 
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
+    /* Safari */
     position: sticky;
     top: 12vh;
 }
 
-.searchbalk.isSticky{
+.searchbalk.isSticky {
     width: 100%;
     margin-left: 0%;
 }
 
-.searchbalk > * {
+.searchbalk>* {
     height: 80%;
     margin-left: 1%;
     font-size: 20px;
@@ -186,7 +187,7 @@ nav > h1 {
     background-size: cover;
 }
 
-.advertentie > .titelRow {
+.advertentie>.titelRow {
     width: 80%;
     margin-left: 10%;
     height: 10%;
@@ -195,16 +196,49 @@ nav > h1 {
     align-items: center;
 }
 
-.advertentie > p {
+.advertentie>p {
     width: 80%;
     margin-left: 10%;
     height: 45%;
 }
 
-.advertentie > a {
+.advertentie>a {
     width: 80%;
     margin-left: 10%;
     height: 10%;
     color: var(--Blue);
     font-size: 14px;
+}
+
+/* over ons */
+.over-ons-container{
+    margin: 20px;
+    padding: 20px;
+    color: #080708;
+    background-color: #fef9ffad;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+}
+#over-ons-titel{
+    color: #080708;
+}
+#over-to-contact-link{
+    color: #080708;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline black solid;
+}
+.over-ons-bg-img{
+    background:url(../assets/images/strand.jpeg);
+    background-size: cover;
+}
+
+/* contact page */
+.contact-container{
+    
 }
