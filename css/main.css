@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-    width: 100vw;
+    width: 100%;
     text-align: center;
     color: var(--Gray);
     margin-bottom: 20px;
@@ -46,6 +46,11 @@ input {
     border: var(--Black) 2px solid;
     border-radius: 10px;
     background: var(--White);
+    text-align: center;
+}
+
+input[type=submit] {
+    cursor: pointer;
 }
 
 /* nav */
@@ -244,4 +249,39 @@ nav > h1 {
     padding: 10%;
     color: var(--White);
     background: linear-gradient(180deg, rgba(250,200,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+/* login pagina */
+#loginForm {
+    margin-top: calc(12vh + 60px);
+    width: 30%;
+    height: 70vh;
+    margin-left: 35%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: var(--shadow);
+}
+
+#loginForm > input {
+    width: 80%;
+    height: 15%;
+    border-radius: 0px;
+    border: var(--Gray) 1px solid;
+    border-bottom: var(--Black) 2px solid;
+    font-size: 20px;
+}
+
+#loginForm > h2 {
+    margin-top: 16px;
+}
+
+#loginForm > a {
+    margin-top: 50px;
+    height: 10%;
+    color: var(--Blue);
+    font-size: 14px;
 }
