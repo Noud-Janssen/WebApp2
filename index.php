@@ -22,9 +22,17 @@
         <input type="date" name="terugkomstdatum" class="vertrekdatum" id="aankomst-datum">
         <input type="submit" value="zoek" id="zoek-knop">
     </form>
+    <h2>Waar wilt u heen?</h2>
+    <div class="landenWrapper">
+        <a href="" class="landIMG" style="background-image: url(assets/images/noorwegenbg.jpg)"><p>Noorwegen</p></a>
+        <a href="" class="landIMG" style="background-image: url(assets/images/italiebg.jpg)"><p>Italië</p></a>
+        <a href="" class="landIMG" style="background-image: url(assets/images/spanjebg.jpg)"><p>Spanje</p></a>
+        <a href="" class="landIMG" style="background-image: url(assets/images/denmarkbg.jpg)"><p>Denemarken</p></a>   
+        <a href="" class="landIMG" style="background-image: url(assets/images/francebg.jpg)"><p>Frankrijk</p></a>     
+    </div>
     <div class="advertentieWrapper">
         <?php 
-            for ($i = 0; $i < 100 ; $i++) {
+            for ($i = 0; $i < 10 ; $i++) {
                 echo '<div class="advertentie">
                     <div class="adBanner">
                     </div>
@@ -38,7 +46,6 @@
                 </div>';
             }
         ?>
-        
     </div>
 </body>
 </html>
