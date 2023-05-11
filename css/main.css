@@ -8,6 +8,7 @@
     --Black: #080708;
     --Sand: #FCFF6C;
     --White: #FEF9FF;
+    --White-op: #fef9ffb1;
     --Blue: #3772FF;
     --Yellow: #FFD23F;
     --LightBlue: #99B8FF;
@@ -173,26 +174,7 @@ nav > h1 {
     box-shadow: var(--shadow);
 }
 
-/* over ons */
-.over-ons-container{
-    margin: 20px;
-    padding: 20px;
-    color: #080708;
-    background-color: #FEF9FF;
-    height: auto;
-    width: auto;
-    font-size: 20px;
-    font-weight: bold;
-}
-#over-ons-titel{
-    color: #080708;
-}
-#over-to-contact-link{
-    color: #080708;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: underline black solid;
-}
+
 .adBanner {
     width: 100%;
     height: 35%;
@@ -249,8 +231,7 @@ nav > h1 {
     padding: 10%;
     color: var(--White);
     background: linear-gradient(180deg, rgba(250,200,0,0) 0%, rgba(0,0,0,1) 100%);
-}
-
+} 
 /* login pagina */
 #loginForm {
     margin-top: calc(12vh + 60px);
