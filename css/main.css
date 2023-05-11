@@ -8,6 +8,7 @@
     --Black: #080708;
     --Sand: #FCFF6C;
     --White: #FEF9FF;
+    --White-op: #fef9ffad;
     --Blue: #3772FF;
     --Yellow: #FFD23F;
     --LightBlue: #99B8FF;
@@ -163,11 +164,14 @@ nav > h1 {
     margin: 20px;
     padding: 20px;
     color: #080708;
-    background-color: #FEF9FF;
+    background-color: #fef9ffad;
     height: auto;
     width: auto;
     font-size: 20px;
     font-weight: bold;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
 }
 #over-ons-titel{
     color: #080708;
@@ -178,6 +182,12 @@ nav > h1 {
     font-weight: bold;
     text-decoration: underline black solid;
 }
+.over-ons-bg-img{
+    background:url(../assets/images/strand.jpeg);
+    background-size: cover;
+}
+
+/* ad css */
 .adBanner {
     width: 100%;
     height: 35%;
