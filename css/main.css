@@ -286,3 +286,15 @@ nav > h1 {
 #feedback-contact-titel{
     color: #080708;
 }
+
+/* reis pagina */
+.reis-pagina-container{
+    margin: 14vh;
+    height: 86vh;
+    width: auto;
+    box-shadow: var(--shadow);
+}
+.reis-img{
+    margin: 20px;
+    img
+}
