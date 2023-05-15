@@ -266,28 +266,3 @@ nav > h1 {
     color: var(--Blue);
     font-size: 14px;
 }
-
-/* reis pagina */
-.reis-pagina-container{
-    margin: 14vh;
-    height: 86vh;
-    width: auto;
-    box-shadow: var(--shadow);
-}
-.reis-img{
-    margin: 20px;
-    
-
-}
-
-/* reis pagina */
-.reis-pagina-container{
-    margin: 14vh;
-    height: 86vh;
-    width: auto;
-    box-shadow: var(--shadow);
-}
-.reis-img{
-    margin: 20px;
-
-}

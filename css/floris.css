@@ -1,0 +1,110 @@
+/* contact */
+.contact-container{
+    padding: 2vh;
+    color: #080708;
+    background-color: #fef9ffb1;
+    height: 84vh;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12vh;
+}
+.contact-bg-img{
+    background: url(../assets/images/strand.jpeg);
+    background-size: cover;
+}
+.feedback-contact-container{
+    padding: 2vh;
+    color: #080708;
+    background-color: #fef9ffb1;
+    height: 84vh;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12vh;
+}
+.feedback-contact-bg-img{
+    background: url(../assets/images/strand.jpeg);
+    background-size: cover;
+}
+#feedback-contact-titel{
+    color: #080708;
+}
+
+/* over ons */
+.over-ons-container{
+    padding: 2vh;
+    color: #080708;
+    background-color: #fef9ffb1;
+    height: 84vh;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12vh;
+}
+#over-ons-titel{
+    color: #080708;
+}
+#over-to-contact-link{
+    color: #080708;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline black solid;
+}
+.over-ons-bg-img{
+    background: url(../assets/images/strand.jpeg);
+    background-size: cover;
+}
+
+/* reis pagina */
+.reis-pagina-container{
+    box-sizing: border-box;
+    margin: 5vw;
+    margin-top: 16vh;
+    height: 86vh;
+    width: 90vw;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    border-radius: 12px;
+    height: fit-content;
+}
+.reis-foto-container{
+    width: auto;
+    height: 60vh;
+    border-radius: 12px;
+    background-image: url(../assets/images/Leuke-vakantiebestemmingen-NL.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.reis-info{
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+#naam-plek{
+    color: black;
+    border-bottom: 2px solid var(--Blue);
+}
+li{
+    font-size: larger;
+
+}
+ul{
+    list-style: none;
+}
+#head-lijst{
+    margin-top: 20px;
+    color: var(--Blue);
+    text-align: left;
+}
+ul li::before{
+    content: "\2022";
+    color: var(--Blue);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
