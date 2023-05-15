@@ -1,6 +1,6 @@
 <nav>
     <h1>
-        EuropaPlus    
+            
     </h1>
     <div class="link-row">
         <a href="index.php">Home</a>

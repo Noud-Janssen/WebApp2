@@ -174,7 +174,6 @@ nav > h1 {
     box-shadow: var(--shadow);
 }
 
-
 .adBanner {
     width: 100%;
     height: 35%;
@@ -195,7 +194,7 @@ nav > h1 {
 .advertentie > p {
     width: 80%;
     margin-left: 10%;
-    height: 45%;
+    height: 35%;
 }
 
 .advertentie > a {
@@ -209,6 +208,7 @@ nav > h1 {
 .landenWrapper {
     display: flex;
     box-shadow: var(--shadow);
+    margin-bottom: 40px;
 }
 
 .landIMG {

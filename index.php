@@ -9,19 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,400;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/noud.css">
 </head>
 <body>
     <?php 
-        require_once('php/nav.php')
+        require_once('php/config.php');
+        require_once('php/nav.php');
     ?>
     <div class="banner">
     </div>
-    <form class="searchbalk">
-        <input type="text" name="land" id="landform">
-        <input type="date" name="vertrekdatum" class="vertrekdatum" id="vertrek-datum">
-        <input type="date" name="terugkomstdatum" class="vertrekdatum" id="aankomst-datum">
-        <input type="submit" value="zoek" id="zoek-knop">
-    </form>
+    <?php
+        require_once('php/search.php')
+    ?>
+
     <h2>Waar wilt u heen?</h2>
     <div class="landenWrapper">
         <a href="" class="landIMG" style="background-image: url(assets/images/noorwegenbg.jpg)"><p>Noorwegen</p></a>
@@ -30,17 +30,46 @@
         <a href="" class="landIMG" style="background-image: url(assets/images/denmarkbg.jpg)"><p>Denemarken</p></a>   
         <a href="" class="landIMG" style="background-image: url(assets/images/francebg.jpg)"><p>Frankrijk</p></a>     
     </div>
+    <h2>Geadviseerde reizen</h2>
     <div class="advertentieWrapper">
         <?php 
-            for ($i = 0; $i < 10 ; $i++) {
+            $resultSet = $conn->query('SELECT * FROM reizen WHERE isAdvert = 1');
+            while ($result = $resultSet->fetch()) {
                 echo '<div class="advertentie">
                     <div class="adBanner">
                     </div>
                     <div class="titelRow">
-                        <h3>Noorwegen</h3>
-                        <h3>€900,-</h3>
+                        <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
+                        <h3>€'.$result['preis'].'</h3>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse quo minus praesentium totam, assumenda obcaecati, dolorem, distinctio voluptates explicabo nisi numquam! Veniam a eius magnam beatae quia amet corrupti!</p>
+                    <div class="titelRow">
+                    <h3>'.$result['vertrekDatum'].'</h3>
+                    <h3>'.$result['terugkomstDatum'].'</h3>
+                    </div>
+                    <p>'.$result['beschrijving'].'</p>
+                    <a href="link">Meer Informatie</a>
+
+                </div>';
+            }
+        ?>
+    </div>
+    <h2>Nieuw toegevoegd</h2>
+    <div class="advertentieWrapper">
+        <?php 
+            $resultSet = $conn->query('SELECT * FROM reizen ORDER BY id DESC LIMIT 4');
+            while ($result = $resultSet->fetch()) {
+                echo '<div class="advertentie">
+                    <div class="adBanner">
+                    </div>
+                    <div class="titelRow">
+                        <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
+                        <h3>€'.$result['preis'].'</h3>
+                    </div>
+                    <div class="titelRow">
+                    <h3>'.$result['vertrekDatum'].'</h3>
+                    <h3>'.$result['terugkomstDatum'].'</h3>
+                    </div>
+                    <p>'.$result['beschrijving'].'</p>
                     <a href="link">Meer Informatie</a>
 
                 </div>';
