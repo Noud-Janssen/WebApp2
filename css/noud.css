@@ -1,0 +1,27 @@
+nav > h1 {
+    background-image: url("../assets/images/logo.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 50%;
+    height: 100%;
+    transform: translateX(-12%);
+}
+
+/* resultaat pagina */
+#resultaat-pagina > .searchbalk {
+    width: 100vw;
+    margin: 0;
+    position: fixed;
+    top: 12vh;
+}
+
+#resultaat-pagina > .advertentie-wrapper {
+    padding: 10vw;
+    padding-top: 25vh;
+}
+
+#resultaat-pagina > .advertentie-wrapper > .advertentie {
+    width: 80vw;
+    max-width: 80vw;
+}
