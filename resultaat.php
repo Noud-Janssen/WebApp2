@@ -18,8 +18,13 @@
 
 
 <?php
-    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE land LIKE ?");
-    $resultSet->execute(['%'.$_POST['land'].'%']);
+    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE land LIKE ? OR plaats LIKE ?");
+    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%']);
+    if (count($resultSet->fetchAll()) < 1) {
+        echo "<h2>Geen resultaten gevonden</h2>";
+    }
+    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE land LIKE ? OR plaats LIKE ?");
+    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%']);
 
     while ($result = $resultSet->fetch()) {
         echo '<div class="advertentie">
