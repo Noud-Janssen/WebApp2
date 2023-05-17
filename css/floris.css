@@ -108,3 +108,11 @@ ul li::before{
     width: 1em;
     margin-left: -1em;
 }
+.reis-recensies{
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}

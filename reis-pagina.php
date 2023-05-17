@@ -36,6 +36,14 @@
                 <li>Voor een bus of trein springen.</li>
             </ul>
         </div>
+        <div class="reis-recensies">
+            <ul>
+                <h2 id="head-lijst">Recensies.</h2>
+                <li>★★★★: Leuke activiteiten om te doen en leuke plek waar je overnacht.</li>
+                <li>★★: Niks leuks aan, maar voor een bus springen is wel een beetje leuk teminste.</li>
+                <li>★★★: Prima maar niks bijzonders. Ook best veel lawaai.</li>
+            </ul>
+        </div>
     </div>
 </body>
 
