@@ -47,7 +47,7 @@
                     <h3>'.$result['terugkomstDatum'].'</h3>
                     </div>
                     <p>'.$result['beschrijving'].'</p>
-                    <a href="link">Meer Informatie</a>
+                    <a href="reis-pagina.php?id='.$result['id'].'">Meer Informatie</a>
 
                 </div>';
             }
@@ -70,7 +70,7 @@
                     <h3>'.$result['terugkomstDatum'].'</h3>
                     </div>
                     <p>'.$result['beschrijving'].'</p>
-                    <a href="link">Meer Informatie</a>
+                    <a href="reis-pagina.php?id='.$result['id'].'">Meer Informatie</a>
 
                 </div>';
             }

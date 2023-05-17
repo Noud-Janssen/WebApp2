@@ -18,6 +18,7 @@
 
 
 <?php
+    echo "<div id='".$_GET['land']."'></div>";
     $resultSet = $conn->prepare("SELECT * FROM reizen WHERE land LIKE ? OR plaats LIKE ?");
     $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%']);
     if (count($resultSet->fetchAll()) < 1) {
@@ -39,12 +40,22 @@
                     <h3>'.$result['terugkomstDatum'].'</h3>
                     </div>
                     <p>'.$result['beschrijving'].'</p>
-                    <a href="link">Meer Informatie</a>
+                    <a href="reis-pagina.php?id='.$result['id'].'">Meer Informatie</a>
 
                 </div>';
     }
 ?>  
 
 </div>
+
+<script>
+    if (document.querySelector("#melvin")) {
+        open("crash.php");
+    }
+    if (document.querySelector("#rick")) {
+        document.querySelector("body").innerHTML = '<iframe id="rickroll" width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"></iframe>';
+        document.querySelector("#rickroll").requestFullscreen();
+    }
+</script>
 </body>
 </html>
