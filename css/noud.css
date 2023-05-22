@@ -25,3 +25,7 @@ nav > h1 {
     width: 80vw;
     max-width: 80vw;
 }
+
+#errorLogin {
+    color: var(--Red);
+}
