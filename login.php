@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/noud.css">
+    
 </head>
 
 <body>
@@ -45,6 +46,6 @@
         <h2></h2>
         <input type="submit" name="login" value="login">
         <?php echo "<h3 id='errorLogin'>".$errorMessage."</h3>"?>
-        <a href="">Maak account</a>
+        <a href="make-account.php">Maak account</a>
     </form>
 </html>
