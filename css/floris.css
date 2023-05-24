@@ -86,7 +86,7 @@
 }
 #naam-plek{
     color: black;
-    border-bottom: 2px solid var(--Blue);
+    width: fit-content;
 }
 li{
     font-size: larger;
@@ -115,4 +115,17 @@ ul li::before{
     padding-left: 25px;
     padding-bottom: 10px;
     margin-top: 10px;
+}
+#prijs{
+    color: black;
+    width: fit-content;
+
+}
+.naam-prijs-balk{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: var(--Blue)solid 2px;
 }
