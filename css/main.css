@@ -60,7 +60,7 @@ nav {
     height: 12vh;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     background-color: var(--Blue);
@@ -84,7 +84,7 @@ nav > h1 {
 .link-row {
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 60%;
 }
 
 /* homepage */
@@ -97,7 +97,7 @@ nav > h1 {
     width: 100vw;
     height: 88vh;
 
-    position: absolute;
+    position: fixed; z-index: -10;
     top: 12vh;
 
     display: flex;

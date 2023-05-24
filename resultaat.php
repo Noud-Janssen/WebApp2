@@ -53,7 +53,7 @@
         open("crash.php");
     }
     if (document.querySelector("#rick")) {
-        document.querySelector("body").innerHTML = '<iframe id="rickroll" width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"></iframe>';
+        document.querySelector("body").innerHTML = '<iframe id="rickroll" width="840" height="630" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"></iframe>';
         document.querySelector("#rickroll").requestFullscreen();
     }
 </script>

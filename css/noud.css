@@ -8,6 +8,60 @@ nav > h1 {
     transform: translateX(-12%);
 }
 
+#accountButton {
+    text-decoration: none;
+    color: var(--White);
+    font-size: 25px;
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#accountOptions {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 200px;
+    height: fit-content;
+    background-color: var(--White);
+    transition-duration: 100ms;
+
+    padding-bottom: 10px;
+
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+}
+
+#accountOptions > * {
+    color: var(--Black);
+    font-size: 25px;
+    width: 180px;
+    text-align: left;
+}
+
+#accountOptions > *:hover {
+    text-decoration: underline;
+}
+
+#accountOptions > h3 {
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#accountOptions > h3:hover {
+    text-decoration: none;
+}
+
+#accountButton:hover #accountOptions {
+    display: flex;
+}
+
 /* resultaat pagina */
 #resultaat-pagina > .searchbalk {
     width: 100vw;
@@ -28,4 +82,11 @@ nav > h1 {
 
 #errorLogin {
     color: var(--Red);
+}
+
+.mainWrapper {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--White);
+    padding-top: 30px;
 }
