@@ -72,7 +72,7 @@ nav {
 }
 
 nav > h1 {
-    width: 50%;
+    width: 100px;
 }
 
 #nav-svg {
@@ -109,7 +109,7 @@ nav > h1 {
 
 .searchbalk {
     width: 80%;
-    height: 50px;
+    height: 80px;
     margin-left: 10%;
     margin-top: calc(50vh - 25px);
     margin-bottom: calc(50vh + 40px);
@@ -151,9 +151,9 @@ nav > h1 {
 
 }
 
-.vertrekdatum {
+/*.vertrekdatum {
     aspect-ratio: 1 / 1;
-}
+}*/
 
 /* advertenties */
 .advertentieWrapper {
