@@ -13,11 +13,17 @@
                 header('index.php');
                 echo "<a href='login.php'>Login</a>";
             } else if (isset($_SESSION['inlogid'])) {
+                $result = $conn->query("SELECT * FROM accounts WHERE id=".$_SESSION['inlogid']);
+                $result = $result->fetch();
                 echo "<div id='accountButton'>Account
                 <div id='accountOptions'>
                     <h3>Account</h3>
                     <a href='mijn-reizen.php'>Mijn Boekingen</a>
-                    <a href='mijn-account.php'>Mijn account</a>
+                    <a href='mijn-account.php'>Mijn account</a>";
+                    if ($result['isadmin'] == 1) {
+                        echo "<a href='admin-panel.php'>Admin panel</a>'";
+                    }
+                    echo "
                     <form method='post'>
                     <input type='submit' name='logout' value='Logout'>
                     </form>

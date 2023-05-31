@@ -27,7 +27,7 @@
                 <h2 id="admin-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
             </div>
             <div class="admin-button-wrapper">
-                <div class="admin-button-edit"><a id="admin-edit-button" href="admin-edit.php">Edit</a></div>
+                <div class="admin-button-edit"><a id="admin-edit-button" href="admin-edit.php?id='.$result['id'].'">Edit</a></div>
                 <div class="admin-button-boekingen"><a id="admin-boekingen-button" href="admin-boekingen.php">Boekingen</a></div>
             </div>
         </div>
