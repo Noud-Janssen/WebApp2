@@ -128,6 +128,7 @@ ul li::before{
     flex-direction: row;
     justify-content: space-between;
     border-bottom: var(--Blue)solid 2px;
+
 }
 
 /* voorwaarden */
@@ -225,4 +226,17 @@ ul li::before{
     height: 50px;
     justify-content: center;
     align-items: center;
+
+}
+
+/* admin boekingen */
+
+#admin-boekingen-button{
+    color: black;
+}
+
+/* admin edit */
+
+#admin-edit-button{
+    color: black;
 }
