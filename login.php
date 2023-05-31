@@ -45,6 +45,6 @@
         <h2></h2>
         <input type="submit" name="login" value="login">
         <?php echo "<h3 id='errorLogin'>".$errorMessage."</h3>"?>
-        <a href="">Maak account</a>
+        <a href="make-account.php">Maak account</a>
     </form>
 </html>

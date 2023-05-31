@@ -19,62 +19,66 @@
     <div class="banner">
     </div>
     <?php
-        require_once('php/search.php')
-    ?>
-
-    <h2>Waar wilt u heen?</h2>
-    <div class="landenWrapper">
-        <a href="http://localhost/WebApp2/resultaat.php?land=Noorwegen&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/noorwegenbg.jpg)"><p>Noorwegen</p></a>
-        <a href="http://localhost/WebApp2/resultaat.php?land=Italië&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/italiebg.jpg)"><p>Italië</p></a>
-        <a href="http://localhost/WebApp2/resultaat.php?land=Spanje&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/spanjebg.jpg)"><p>Spanje</p></a>
-        <a href="http://localhost/WebApp2/resultaat.php?land=Denemarken&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/denmarkbg.jpg)"><p>Denemarken</p></a>   
-        <a href="http://localhost/WebApp2/resultaat.php?land=Frankrijk&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/francebg.jpg)"><p>Frankrijk</p></a>     
-    </div>
-    <h2>Geadviseerde reizen</h2>
-    <div class="advertentieWrapper">
-        <?php 
-            $resultSet = $conn->query('SELECT * FROM reizen WHERE isAdvert = 1');
-            while ($result = $resultSet->fetch()) {
-                echo '<div class="advertentie">
-                    <div class="adBanner">
-                    </div>
-                    <div class="titelRow">
-                        <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
-                        <h3>€'.$result['preis'].'</h3>
-                    </div>
-                    <div class="titelRow">
-                    <h3>'.$result['vertrekDatum'].'</h3>
-                    <h3>'.$result['terugkomstDatum'].'</h3>
-                    </div>
-                    <p>'.$result['beschrijving'].'</p>
-                    <a href="reis-pagina.php?id='.$result['id'].'">Meer Informatie</a>
-
-                </div>';
-            }
+            require_once('php/search.php')
         ?>
-    </div>
-    <h2>Nieuw toegevoegd</h2>
-    <div class="advertentieWrapper">
-        <?php 
-            $resultSet = $conn->query('SELECT * FROM reizen ORDER BY id DESC LIMIT 4');
-            while ($result = $resultSet->fetch()) {
-                echo '<div class="advertentie">
-                    <div class="adBanner">
-                    </div>
-                    <div class="titelRow">
-                        <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
-                        <h3>€'.$result['preis'].'</h3>
-                    </div>
-                    <div class="titelRow">
-                    <h3>'.$result['vertrekDatum'].'</h3>
-                    <h3>'.$result['terugkomstDatum'].'</h3>
-                    </div>
-                    <p>'.$result['beschrijving'].'</p>
-                    <a href="reis-pagina.php?id='.$result['id'].'">Meer Informatie</a>
+    <div class="mainWrapper">
+        
 
-                </div>';
-            }
-        ?>
+        <h2>Waar wilt u heen?</h2>
+        <div class="landenWrapper">
+            <a href="http://localhost/WebApp2/resultaat.php?land=Noorwegen&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/noorwegenbg.jpg)"><p>Noorwegen</p></a>
+            <a href="http://localhost/WebApp2/resultaat.php?land=Italië&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/italiebg.jpg)"><p>Italië</p></a>
+            <a href="http://localhost/WebApp2/resultaat.php?land=Spanje&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/spanjebg.jpg)"><p>Spanje</p></a>
+            <a href="http://localhost/WebApp2/resultaat.php?land=Denemarken&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/denmarkbg.jpg)"><p>Denemarken</p></a>   
+            <a href="http://localhost/WebApp2/resultaat.php?land=Frankrijk&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/francebg.jpg)"><p>Frankrijk</p></a>     
+        </div>
+        <h2>Geadviseerde reizen</h2>
+        <div class="advertentieWrapper">
+            <?php 
+                $resultSet = $conn->query('SELECT * FROM reizen WHERE isAdvert = 1');
+                while ($result = $resultSet->fetch()) {
+                    echo '<div class="advertentie">
+                        <div class="adBanner">
+                        </div>
+                        <div class="titelRow">
+                            <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
+                            <h3>€'.$result['preis'].'</h3>
+                        </div>
+                        <div class="titelRow">
+                        <h3>'.$result['vertrekDatum'].'</h3>
+                        <h3>'.$result['terugkomstDatum'].'</h3>
+                        </div>
+                        <p>'.$result['beschrijving'].'</p>
+                        <a href="reis-pagina.php?id='.$result['id'].'">Meer Informatie</a>
+
+                    </div>';
+                }
+            ?>
+        </div>
+        <h2>Nieuw toegevoegd</h2>
+        <div class="advertentieWrapper">
+            <?php 
+                $resultSet = $conn->query('SELECT * FROM reizen ORDER BY id DESC LIMIT 4');
+                while ($result = $resultSet->fetch()) {
+                    echo '<div class="advertentie">
+                        <div class="adBanner">
+                        </div>
+                        <div class="titelRow">
+                            <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
+                            <h3>€'.$result['preis'].'</h3>
+                        </div>
+                        <div class="titelRow">
+                        <h3>'.$result['vertrekDatum'].'</h3>
+                        <h3>'.$result['terugkomstDatum'].'</h3>
+                        </div>
+                        <p>'.$result['beschrijving'].'</p>
+                        <a href="reis-pagina.php?id='.$result['id'].'">Meer Informatie</a>
+
+                    </div>';
+                }
+            ?>
+        </div>
     </div>
+    
 </body>
 </html>
