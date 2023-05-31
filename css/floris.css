@@ -128,4 +128,116 @@ ul li::before{
     flex-direction: row;
     justify-content: space-between;
     border-bottom: var(--Blue)solid 2px;
+<<<<<<< Updated upstream
+=======
+}
+
+/* voorwaarden */
+#voorwaarden-titel{
+    color: #080708;
+    justify-self: left;
+    font-size: 50px;
+}
+.voorwaarden-bg-img{
+    background: url(../assets/images/strand.jpeg);
+    background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw; 
+}
+.voorwaarden-container{
+    padding: 2vh;
+    color: #080708;
+    background-color: #fef9ffb1;
+    height: fit-content;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    position: relative;
+}
+#voorwaarden-paragraaf{
+    font-size: 25px;
+}
+#voorwaarden-email-link{
+    color: #080708;
+   text-decoration: underline black solid 2px;
+}
+
+/* admin panel */
+.admin-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 86;
+    width: auto;
+    margin-top: 12vh;
+}
+.admin-reis-item{
+    box-shadow: var(--shadow);
+    margin-left: 6vh;
+    margin-right: 6vh;
+    margin-bottom: 6vh;
+    margin-top: 5vh;
+    padding: 7px;
+    border-radius: 12px;
+    width: 40VW;
+    height: 200px;
+    font-size: larger;
+    font-weight: bold;
+}
+#admin-land-plaats-text{
+    color: #080708;
+}
+.admin-head-text{
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+}
+.admin-button-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 17%;
+}
+/* .admin-button-delete{
+    border: #FF101F solid 2px;
+    border-radius: 12px;
+    display: flex; 
+    width: 10vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+} */
+.admin-button-edit{
+    border: #FFD23F solid 2px;
+    border-radius: 12px;
+    display: flex;
+    width: 10vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.admin-button-boekingen{
+    border: #FFD23F solid 2px;
+    border-radius: 12px; 
+    display: flex;
+    width: 10vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* admin boekingen */
+
+#admin-boekingen-button{
+    color: black;
+}
+
+/* admin edit */
+
+#admin-edit-button{
+    color: black;
+>>>>>>> Stashed changes
 }
