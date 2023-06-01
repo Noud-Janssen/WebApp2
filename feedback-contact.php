@@ -14,8 +14,16 @@
 
 <body>
     <?php
-    require_once('php/nav.php')
-    ?><div class="feedback-contact-bg-img">
+
+    require_once('php/config.php');
+    require_once('php/nav.php');
+
+        echo "<script>alert('test')</script>";
+        $conn->query("INSERT INTO `contact`(`email`, `onderwerp`, `text`) VALUES ('" . $_POST['email'] . "','" . $_POST['onderwerp'] . "','" . $_POST['text'] . "')");
+
+
+    ?>
+    <div class="feedback-contact-bg-img">
         <div class="feedback-contact-container">
             <h1 id="feedback-contact-titel">E-Mail verstuurd</h1>
             <p>Wij gaan zo snel mogelijk uw E-Mail lezen en een reactie terug sturen.</p>

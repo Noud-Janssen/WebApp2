@@ -14,8 +14,14 @@
 
 <body>
     <?php
-    require_once('php/nav.php')
+    require_once('php/config.php');
+    require_once('php/nav.php');
+    if (isset($POST['submit_button'])) {
+        $conn->query("INSERT INTO `contact`(`email`, `onderwerp`, `text`) VALUES (" . $_POST['email'] . "," . $_POST['onderwerp'] . "," . $_POST['text'] . ")");
+    }
+
     ?>
+<<<<<<< Updated upstream
     <div class="contact-container">
         <form method="post" action="feedback-contact.php">
             <h3>E-Mail:</h3><input type="text" name="Naam">
@@ -23,6 +29,17 @@
             <h3>Text:</h3><textarea name="" id="" cols="90" rows="20"></textarea>
             <button type="submit" name="submit_button">submit</button>
         </form>
+=======
+    <div class="contact-bg-img">
+        <div class="contact-container">
+            <form method="post" action="feedback-contact.php">
+                <h3>E-Mail:</h3><input type="text" name="email">
+                <h3>Onderwerp:</h3><input type="text" name="onderwerp">
+                <h3>Text:</h3><textarea name="text" id="" cols="90" rows="20"></textarea>
+                <button type="submit" name="submit_button">submit</button>
+            </form>
+        </div>
+>>>>>>> Stashed changes
     </div>
 </body>
 
