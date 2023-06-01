@@ -26,6 +26,7 @@
         if ($result = $resultSet->fetch()) {
             if ($_POST['password'] == $result['password']) {
                 $_SESSION['inlogid'] = $result['id'];
+                $_SESSION['isAdmin'] = $result['isadmin'];
                 header("Location: index.php");
             } else {
                 $errorMessage = "Verkeer wachtwoord";

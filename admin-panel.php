@@ -11,13 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/floris.css">
+    <link rel="stylesheet" href="css/noud.css">
 </head>
 
 <body>
-    <div class="admin-container">
-        <?php
+    <?php
         require_once('php/nav.php');
         require('php/config.php');
+    ?>
+
+    <a href="admin-add.php" class="addbutton">+</a>
+
+    <div class="admin-container">
+        <?php
         $resultSet = $conn->query("SELECT * FROM reizen");
         while ($result = $resultSet->fetch()) {
             echo
@@ -39,13 +45,3 @@
 </body>
 
 </html> 
-           <!-- <div class="admin-reis-item">
-            <div class="admin-head-text">
-                <h2 id="admin-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
-            </div>
-            <div class="admin-button-wrapper">
-                <div class="admin-button-delete">a</div>
-                <div class="admin-button-edit">a</div>
-                <div class="admin-button-boekingen">a</div>
-            </div>
-        </div> -->

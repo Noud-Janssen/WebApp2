@@ -14,8 +14,9 @@
         require_once('php/nav.php');
 
         if (isset($_POST['create'])) {
-            $prepared = $conn->prepare("INSERT INTO accounts(email,password) VALUES(?,?)");
+            $prepared = $conn->prepare("INSERT INTO accounts(email,password,isadmin) VALUES(?,?,'0')");
             $prepared->execute([$_POST['email'],$_POST['password']]);
+            header("location: login.php");
         }
     ?>
     <form action="" method="post" id="loginForm">

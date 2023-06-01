@@ -174,3 +174,27 @@ nav > .link-row > a {
     margin-top: 20px;
     height: auto;
 }
+
+.addbutton {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+    background-color: var(--Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: fromright;
+    animation-duration: 1s;
+}
+
+@keyframes fromright {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}

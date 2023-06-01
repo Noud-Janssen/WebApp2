@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,400;1,900&display=swap" rel="stylesheet">
@@ -22,21 +22,22 @@
             header("location: index.php");
         }
 
-        if (isset($_POST['update'])) {
-            $prepared = $conn->prepare("UPDATE `reizen` SET 
-                    `land` = ?,
-                    `preis` = ?,
-                    `vertrekDatum` = ?,
-                    `terugkomstDatum` = ?,
-                    `isAdvert` = ?,
-                    `plaats` = ?,
-                    `beschrijving`= ?,
-                    `wc`= ?,
-                    `slaapkamers`= ?,
-                    `oppervlakte_woning`= ?,
-                    `handicap_vriendelijk`= ?
-                    WHERE 
-                    id = ?");
+        if (isset($_POST['create'])) {
+            $prepared = $conn->prepare("INSERT INTO `reizen`
+                (
+                    `land`,
+                    `preis`,
+                    `vertrekDatum`,
+                    `terugkomstDatum`,
+                    `isAdvert`,
+                    `plaats`,
+                    `beschrijving`,
+                    `wc`,
+                    `slaapkamers`,
+                    `oppervlakte_woning`,
+                    `handicap_vriendelijk`
+                ) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+                    
             if (isset($_POST['isAdvert'])) {
                 $isAdvert = 1;
             } else {
@@ -59,47 +60,41 @@
                 $_POST['wc'],
                 $_POST['slaapkamers'],
                 $_POST['oppervlakte'],
-                $handicap,
-                $_GET['id']
+                $handicap
             ]);
         }
-
-        $resultset = $conn->prepare("SELECT * FROM reizen WHERE id = ?");
-        $resultset->execute([$_GET['id']]);
-        $result = $resultset->fetch();
 
     ?>
     <form class="edit-container" method="post">
         <h2>Basis informatie</h2>
         <div class="label">Land</div>
-        <input type="text" name="land" class="w50" id="" <?php echo 'value="'.$result['land'].'"'?>>
+        <input type="text" name="land" class="w50" id="" value="">
         <div class="label">Plaats</div>
-        <input type="text" name="plaats" class="w50" id="" <?php echo 'value="'.$result['plaats'].'"'?>>
+        <input type="text" name="plaats" class="w50" id="" >
         <div class="label">Prijs</div>
-        <input type="number" name="prijs" id="" min="50" <?php echo 'value="'.$result['preis'].'"'?>>
+        <input type="number" name="prijs" id="" min="50" >
         <div class="label">Beschrijving</div>
-        <textarea name="beschrijving" id="" cols="30" rows="10"><?php echo $result['beschrijving']?></textarea>
+        <textarea name="beschrijving" id="" cols="30" rows="10"></textarea>
         <h2>Datums</h2>
         <div class="label">Vertrek datum</div>
-        <input type="date" name="vertrekDatum" id="" <?php echo 'value="'.$result['vertrekDatum'].'"'?>>
+        <input type="date" name="vertrekDatum" id="">
         <div class="label">Terugkomst datum</div>
-        <input type="date" name="terugkomstDatum" id="" <?php echo 'value="'.$result['terugkomstDatum'].'"'?>>
+        <input type="date" name="terugkomstDatum" id="">
         <h2>Voorzieningen</h2>
         <div class="label ">Aantal wc's</div>
-        <input type="number" name="wc" id="" <?php echo 'value="'.$result['wc'].'"'?> max="10" min="0">
+        <input type="number" name="wc" id=""  max="10" min="0">
         <div class="label ">Aantal slaapkamers</div>
-        <input type="number" name="slaapkamers" id="" <?php echo 'value="'.$result['slaapkamers'].'"'?> max="10" min="0">
+        <input type="number" name="slaapkamers" id=""  max="10" min="0">
         <div class="label ">Oppervlakte verblijf</div>
-        <input type="number" name="oppervlakte" id="" <?php echo 'value="'.$result['oppervlakte_woning'].'"'?> min="0">
+        <input type="number" name="oppervlakte" id=""  min="0">
         <div class="label">Handicap vriendelijk</div>
-        <input type="checkbox" name="handicapvriendelijk" id=""<?php if ($result['handicap_vriendelijk']) {echo "checked";} ?>>
+        <input type="checkbox" name="handicapvriendelijk" id="">
         <div class="label">Wifi</div>
         <input type="checkbox" name="wifi" id="">
         <h2>Admin instellingen</h2>
         <div class="label">Is advertentie</div>
-        <input type="checkbox" name="isAdvert" id="" <?php if ($result['isAdvert']) {echo "checked";} ?>>
-        <input type="submit" name="update" value="update">
-        <input type="submit" value="delete">
+        <input type="checkbox" name="isAdvert" id="" >
+        <input type="submit" name="create" value="create">
     </form>
 </body>
 
