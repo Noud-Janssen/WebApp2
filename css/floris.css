@@ -3,11 +3,16 @@
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
-    height: 84vh;
+    height: fit-content;
     width: auto;
     font-size: 20px;
     font-weight: bold;
     margin-top: 12vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    position: relative;
 }
 .contact-bg-img{
     background: url(../assets/images/strand.jpeg);
@@ -36,11 +41,16 @@
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
-    height: 84vh;
+    height: fit-content;
     width: auto;
     font-size: 20px;
     font-weight: bold;
     margin-top: 12vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    position: relative;
 }
 #over-ons-titel{
     color: #080708;
@@ -54,6 +64,7 @@
 .over-ons-bg-img{
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
+    
 }
 
 /* reis pagina */
@@ -239,4 +250,111 @@ ul li::before{
 
 #admin-edit-button{
     color: black;
+}
+
+/* mijn reizen */
+.mijn-reizen-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 86;
+    width: auto;
+    margin-top: 12vh;
+}
+.mijn-reizen-reis-item{
+    box-shadow: var(--shadow);
+    margin-left: 6vh;
+    margin-right: 6vh;
+    margin-bottom: 6vh;
+    margin-top: 5vh;
+    padding: 7px;
+    border-radius: 12px;
+    width: 40VW;
+    height: 200px;
+    font-size: larger;
+    font-weight: bold;
+}
+#mijn-reizen-land-plaats-text{
+    color: #080708;
+}
+.mijn-reizen-head-text{
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+}
+.mijn-reizen-button-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 17%;
+}
+/* .mijn-reizen-button-delete{
+    border: #FF101F solid 2px;
+    border-radius: 12px;
+    display: flex; 
+    width: 10vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+} */
+.mijn-reizen-button-edit{
+    border: #FFD23F solid 2px;
+    border-radius: 12px;
+    display: flex;
+    width: 10vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.mijn-reizen-button-boekingen{
+    border: #FFD23F solid 2px;
+    border-radius: 12px; 
+    display: flex;
+    width: 10vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
+.mijn-reizen-annuleer-link{
+    border: #FFD23F solid 2px;
+    border-radius: 12px;
+    display: flex;
+    width: 10vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #080708;
+}
+
+/* annuleer */
+#annuleer-titel{
+    color: #080708;
+    justify-self: left;
+    font-size: 30px;
+}
+.annuleer-bg-img{
+    background: url(../assets/images/strand.jpeg);
+    background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw; 
+}
+.annuleer-container{
+    padding: 2vh;
+    color: #080708;
+    background-color: #fef9ffb1;
+    height: fit-content;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    position: relative;
+}
+#annuleer-back-to-mijn-reizen-link{
+    color: #080708;
+    justify-self: left;
+    font-size: 30px;
+    text-decoration: underline black solid;
 }

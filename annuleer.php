@@ -19,12 +19,15 @@
     require_once('php/config.php');
     require_once('php/nav.php');
     
-    ?><div class="feedback-contact-bg-img">
-        <div class="feedback-contact-container">
-            <h1 id="feedback-contact-titel">E-Mail verstuurd</h1>
-            <p>Wij gaan zo snel mogelijk uw E-Mail lezen en een reactie terug sturen.</p>
-        </div>
+    $resultset = $conn->prepare("DELETE FROM boekingen WHERE id = ?");
+    $resultset->execute([$_GET['id']]);
+    
+    ?>
+    <div class="annuleer-bg-img">
     </div>
+    <div class="annuleer-container">
+            <h1 id="annuleer-titel">Reis succesvol geannuleerd, en klik <a id="annuleer-back-to-mijn-reizen-link" href="mijn-reizen.php">hier</a> om weer terug te gaan naar uw boekingen</h1>
+        </div>
 </body>
 
 </html>
