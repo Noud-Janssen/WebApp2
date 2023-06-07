@@ -3,11 +3,16 @@
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
-    height: 84vh;
+    height: fit-content;
     width: auto;
     font-size: 20px;
     font-weight: bold;
     margin-top: 12vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    position: relative;
 }
 .contact-bg-img{
     background: url(../assets/images/strand.jpeg);
@@ -36,11 +41,16 @@
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
-    height: 84vh;
+    height: fit-content;
     width: auto;
     font-size: 20px;
     font-weight: bold;
     margin-top: 12vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    position: relative;
 }
 #over-ons-titel{
     color: #080708;
@@ -54,6 +64,7 @@
 .over-ons-bg-img{
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
+    
 }
 
 /* reis pagina */
@@ -240,3 +251,5 @@ ul li::before{
 #admin-edit-button{
     color: black;
 }
+
+/* mijn reizen */
