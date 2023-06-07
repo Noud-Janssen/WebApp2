@@ -18,19 +18,15 @@
     <?php
     require_once('php/nav.php');
     require_once('php/config.php');
+    $resultset = $conn->prepare("DELETE FROM boekingen WHERE id = ?");
+    $resultset->execute([$_GET['id']]);
+    
     ?>
-    <div class="contact-bg-img">
-        <div class="contact-container">
-            <form method="post" action="feedback-contact.php">
-                <h3>E-Mail:</h3><input type="text" name="Naam">
-                <h3>Onderwerp:</h3><input type="text" name="omschrijving">
-                <h3>Text:</h3><textarea name="" id="" cols="90" rows="20"></textarea>
-                <button type="submit" name="submit_button">submit</button>
-            </form>
-        </div>
+    <div class="annuleer-bg-img">
     </div>
-
-
+    <div class="annuleer-container">
+            <h1 id="annuleer-titel">Reis succesvol geannuleerd, en klik <a id="annuleer-back-to-mijn-reizen-link" href="mijn-reizen.php">hier</a> om weer terug te gaan naar uw boekingen</h1>
+        </div>
 </body>
 
 </html>

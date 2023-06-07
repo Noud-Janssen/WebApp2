@@ -11,11 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/floris.css">
+    <link rel="stylesheet" href="css/noud.css">
 </head>
 
 <body>
     <?php
-    require_once('php/nav.php')
+    require_once('php/nav.php');
+    require_once('php/config.php');
     ?>
     <div class="over-ons-bg-img">
         <div class="over-ons-container">

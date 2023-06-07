@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/floris.css">
+    <link rel="stylesheet" href="css/noud.css">
 </head>
 
 <body>
@@ -25,24 +26,25 @@
         ON accounts.id = boekingen.account_id
         INNER JOIN reizen
         ON boekingen.reis_id = reizen.id
-        WHERE id = " . $_SESSION['inlogid'] . ";"
+        WHERE accounts.id = " . $_SESSION['inlogid'] . ";"
         );
-        // while ($result = $resultSet->fetch()) {
-        //     echo
-        //     ' 
-        //     <div class="admin-reis-item">
-        //     <div class="admin-head-text">
-        //         <h2 id="admin-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
-        //     </div>
-        //     <div class="admin-button-wrapper">
-        //         <div class="admin-button-edit"><a id="admin-edit-button" href="admin-edit.php?id=' . $result['id'] . '">Edit</a></div>
-        //         <div class="admin-button-boekingen"><a id="admin-boekingen-button" href="admin-boekingen.php">Boekingen</a></div>
-        //     </div>
-        // </div>
-        //    ';
-        // }
+        while ($result = $resultSet->fetch()) {
+            echo
+            ' 
+            <div class="mijn-reizen-reis-item">
+            <div class="mijn-reizen-head-text">
+                <h2 id="mijn-reizen-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
+            </div>
+            <div class="mijn-reizen-button-wrapper">
+                <div class="mijn-reizen-button-edit">
+             
+                <a class="mijn-reizen-annuleer-link" href="annuleer.php?id=' . $result['id'] . '">Annuleren</a></div>
+            </div>
+        </div>
+           ';
+        }
         ?>
-
+        <!-- <a id="mijn-reizen-edit-button" href="-edit.php?id=' . $result['id'] . '">annuleren</a> -->
     </div>
 </body>
 
