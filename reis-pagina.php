@@ -54,8 +54,12 @@
             <li>★★★: Prima maar niks bijzonders. Ook best veel lawaai.</li>
         </ul>
     </div>
-    </div>'
+    ';
     ?>
+        <form action="" method="post">
+            <input class="admin-button-edit" type="submit" value="Boek">
+        </form>
+    </div>
 
 
 
