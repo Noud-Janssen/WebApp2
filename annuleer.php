@@ -16,8 +16,9 @@
 
 <body>
     <?php
-    require_once('php/nav.php');
     require_once('php/config.php');
+    require_once('php/nav.php');
+    
     $resultset = $conn->prepare("DELETE FROM boekingen WHERE id = ?");
     $resultset->execute([$_GET['id']]);
     

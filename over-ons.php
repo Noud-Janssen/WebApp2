@@ -16,8 +16,9 @@
 
 <body>
     <?php
-    require_once('php/nav.php');
     require_once('php/config.php');
+    require_once('php/nav.php');
+    
     ?>
     <div class="over-ons-bg-img">
         <div class="over-ons-container">

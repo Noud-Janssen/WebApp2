@@ -16,9 +16,10 @@
 
 <body>
     <div class="admin-container">
-        <?php
-        require_once('php/nav.php');
+        <?php 
         require('php/config.php');
+        require_once('php/nav.php');
+       
         $resultSet = $conn->query("SELECT * FROM reizen");
         while ($result = $resultSet->fetch()) {
             echo

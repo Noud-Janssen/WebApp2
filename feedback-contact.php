@@ -16,8 +16,9 @@
 
 <body>
     <?php
-    require_once('php/nav.php');
     require_once('php/config.php');
+    require_once('php/nav.php');
+    
     ?><div class="feedback-contact-bg-img">
         <div class="feedback-contact-container">
             <h1 id="feedback-contact-titel">E-Mail verstuurd</h1>

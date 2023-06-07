@@ -16,8 +16,9 @@
 
 <body>
     <?php
-    require_once('php/nav.php');
     require_once('php/config.php');
+    require_once('php/nav.php');
+    
     ?>
     <div class="contact-bg-img">
         <div class="contact-container">
