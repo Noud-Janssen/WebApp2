@@ -27,6 +27,7 @@
             if ($_POST['password'] == $result['password']) {
                 $_SESSION['inlogid'] = $result['id'];
                 $_SESSION['isAdmin'] = $result['isadmin'];
+                $_SESSION['username'] = explode('@',$result['email'])[0];
                 header("Location: index.php");
             } else {
                 $errorMessage = "Verkeer wachtwoord";

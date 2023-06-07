@@ -54,12 +54,11 @@
             <li>★★★: Prima maar niks bijzonders. Ook best veel lawaai.</li>
         </ul>
     </div>
+    <a class="admin-button-edit" href="boeken.php?id='.$result['id'].'">Boek nu!</a>
+    </div>
     ';
     ?>
-        <form action="" method="post">
-            <input class="admin-button-edit" type="submit" value="Boek">
-        </form>
-    </div>
+        
 
 
 
