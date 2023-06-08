@@ -19,7 +19,6 @@
         <?php
         require_once('php/config.php');
         require_once('php/nav.php');
-       
     ?>
 
     <a href="admin-add.php" class="addbutton">+</a>
