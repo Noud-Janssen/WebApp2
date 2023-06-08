@@ -16,38 +16,47 @@
 
 <body>
     <div class="admin-container">
-        <?php    
+        <?php
         require('php/config.php');
         require_once('php/nav.php');
-    
-        $resultSet = $conn->query("SELECT * FROM reizen");
-        while ($result = $resultSet->fetch()) {
-            echo
-            ' 
 
-           ';
-        }
+        $resultSet = $conn->prepare("SELECT * FROM reizen WHERE id = ? ");
+        $resultSet->execute([$_GET['id']]);
+        $resultSet = $conn->query(
+            "SELECT *
+        FROM accounts
+        INNER JOIN boekingen
+        ON accounts.id = boekingen.account_id
+        INNER JOIN reizen
+        ON boekingen.reis_id = reizen.id
+        WHERE reizen.id = " . $_GET['id'] . ";"
+        );
         ?>
-        <div class="admin-reis-item">
-            <div class="admin-head-text">
-                <h2 id="admin-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
-            </div>
-            <div class="admin-button-wrapper">
-                <div class="admin-button-edit">a</div>
-                <div class="admin-button-boekingen">a</div>
-            </div>
-        </div>
+        <table>
+            <tr>
+                <th>plek</th>
+                <th>datum begin</th>
+                <th>datum einde</th>
+                <th>email(van booker)</th>
+                <th>annuleren</th>
+            </tr>
+            <?php
+            while ($result = $resultSet->fetch()) {
+                echo
+                ' 
+                <tr>
+                    <td>' . $result['land'] . ', ' . $result['plaats'] . '</td>
+                    <td>' . $result['vertrekDatum'] . '</td>
+                    <td>' . $result['terugkomstDatum'] . '</td>
+                    <td>' . $result['email'] . '</td>
+                    <td><button>annuleren</button></td>
+                </tr>
+           ';
+            }
+            ?>
+
+        </table>
     </div>
 </body>
 
-</html> 
-           <!-- <div class="admin-reis-item">
-            <div class="admin-head-text">
-                <h2 id="admin-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
-            </div>
-            <div class="admin-button-wrapper">
-                <div class="admin-button-delete">a</div>
-                <div class="admin-button-edit">a</div>
-                <div class="admin-button-boekingen">a</div>
-            </div>
-        </div> -->
+</html>

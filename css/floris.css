@@ -1,5 +1,5 @@
 /* contact */
-.contact-container{
+.contact-container {
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
@@ -14,11 +14,13 @@
     padding-right: 10vh;
     position: relative;
 }
-.contact-bg-img{
+
+.contact-bg-img {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
 }
-.feedback-contact-container{
+
+.feedback-contact-container {
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
@@ -28,16 +30,18 @@
     font-weight: bold;
     margin-top: 12vh;
 }
-.feedback-contact-bg-img{
+
+.feedback-contact-bg-img {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
 }
-#feedback-contact-titel{
+
+#feedback-contact-titel {
     color: #080708;
 }
 
 /* over ons */
-.over-ons-container{
+.over-ons-container {
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
@@ -52,23 +56,26 @@
     padding-right: 10vh;
     position: relative;
 }
-#over-ons-titel{
+
+#over-ons-titel {
     color: #080708;
 }
-#over-to-contact-link{
+
+#over-to-contact-link {
     color: #080708;
     font-size: 20px;
     font-weight: bold;
     text-decoration: underline black solid;
 }
-.over-ons-bg-img{
+
+.over-ons-bg-img {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
-    
+
 }
 
 /* reis pagina */
-.reis-pagina-container{
+.reis-pagina-container {
     box-sizing: border-box;
     margin: 5vw;
     margin-top: 16vh;
@@ -79,7 +86,8 @@
     border-radius: 12px;
     height: fit-content;
 }
-.reis-foto-container{
+
+.reis-foto-container {
     width: auto;
     height: 60vh;
     border-radius: 12px;
@@ -87,7 +95,8 @@
     background-size: cover;
     background-position: center;
 }
-.reis-info{
+
+.reis-info {
     width: auto;
     height: auto;
     border-radius: 12px;
@@ -95,31 +104,37 @@
     padding-bottom: 10px;
     margin-top: 10px;
 }
-#naam-plek{
+
+#naam-plek {
     color: black;
     width: fit-content;
 }
-li{
+
+li {
     font-size: larger;
 
 }
-ul{
+
+ul {
     list-style: none;
 }
-#head-lijst{
+
+#head-lijst {
     margin-top: 20px;
     color: var(--Blue);
     text-align: left;
 }
-ul li::before{
+
+ul li::before {
     content: "\2022";
     color: var(--Blue);
     font-weight: bold;
-    display: inline-block; 
+    display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
-.reis-recensies{
+
+.reis-recensies {
     width: auto;
     height: auto;
     border-radius: 12px;
@@ -127,12 +142,14 @@ ul li::before{
     padding-bottom: 10px;
     margin-top: 10px;
 }
-#prijs{
+
+#prijs {
     color: black;
     width: fit-content;
 
 }
-.naam-prijs-balk{
+
+.naam-prijs-balk {
     width: 100%;
     height: auto;
     display: flex;
@@ -143,19 +160,21 @@ ul li::before{
 }
 
 /* voorwaarden */
-#voorwaarden-titel{
+#voorwaarden-titel {
     color: #080708;
     justify-self: left;
     font-size: 50px;
 }
-.voorwaarden-bg-img{
+
+.voorwaarden-bg-img {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
     position: fixed;
     height: 100vh;
-    width: 100vw; 
+    width: 100vw;
 }
-.voorwaarden-container{
+
+.voorwaarden-container {
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
@@ -170,23 +189,26 @@ ul li::before{
     padding-right: 10vh;
     position: relative;
 }
-#voorwaarden-paragraaf{
+
+#voorwaarden-paragraaf {
     font-size: 25px;
 }
-#voorwaarden-email-link{
+
+#voorwaarden-email-link {
     color: #080708;
-   text-decoration: underline black solid 2px;
+    text-decoration: underline black solid 2px;
 }
 
 /* admin panel */
-.admin-container{
+.admin-container {
     display: flex;
     flex-wrap: wrap;
     height: 86;
     width: auto;
     margin-top: 12vh;
 }
-.admin-reis-item{
+
+.admin-reis-item {
     box-shadow: var(--shadow);
     margin-left: 6vh;
     margin-right: 6vh;
@@ -199,18 +221,22 @@ ul li::before{
     font-size: larger;
     font-weight: bold;
 }
-#admin-land-plaats-text{
+
+#admin-land-plaats-text {
     color: #080708;
 }
-.admin-head-text{
+
+.admin-head-text {
     box-shadow: var(--shadow);
     border-radius: 12px;
 }
-.admin-button-wrapper{
+
+.admin-button-wrapper {
     display: flex;
     justify-content: space-evenly;
     margin-top: 17%;
 }
+
 /* .admin-button-delete{
     border: #FF101F solid 2px;
     border-radius: 12px;
@@ -220,7 +246,7 @@ ul li::before{
     justify-content: center;
     align-items: center;
 } */
-.admin-button-edit{
+.admin-button-edit {
     border: #FFD23F solid 2px;
     border-radius: 12px;
     display: flex;
@@ -229,9 +255,10 @@ ul li::before{
     justify-content: center;
     align-items: center;
 }
-.admin-button-boekingen{
+
+.admin-button-boekingen {
     border: #FFD23F solid 2px;
-    border-radius: 12px; 
+    border-radius: 12px;
     display: flex;
     width: 10vw;
     height: 50px;
@@ -242,25 +269,45 @@ ul li::before{
 
 /* admin boekingen */
 
-#admin-boekingen-button{
+#admin-boekingen-button {
     color: black;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px;
+
+}
+
+td,
+th {
+    text-align: left;
+    padding: 8px;
+    border: #FFD23F solid 2px;
+}
+
+tr:nth-child(even) {
+    background-color: #99B8FF;
 }
 
 /* admin edit */
 
-#admin-edit-button{
+#admin-edit-button {
     color: black;
 }
 
 /* mijn reizen */
-.mijn-reizen-container{
+.mijn-reizen-container {
     display: flex;
     flex-wrap: wrap;
     height: 86;
     width: auto;
     margin-top: 12vh;
 }
-.mijn-reizen-reis-item{
+
+.mijn-reizen-reis-item {
     box-shadow: var(--shadow);
     margin-left: 6vh;
     margin-right: 6vh;
@@ -273,18 +320,22 @@ ul li::before{
     font-size: larger;
     font-weight: bold;
 }
-#mijn-reizen-land-plaats-text{
+
+#mijn-reizen-land-plaats-text {
     color: #080708;
 }
-.mijn-reizen-head-text{
+
+.mijn-reizen-head-text {
     box-shadow: var(--shadow);
     border-radius: 12px;
 }
-.mijn-reizen-button-wrapper{
+
+.mijn-reizen-button-wrapper {
     display: flex;
     justify-content: space-evenly;
     margin-top: 17%;
 }
+
 /* .mijn-reizen-button-delete{
     border: #FF101F solid 2px;
     border-radius: 12px;
@@ -294,7 +345,7 @@ ul li::before{
     justify-content: center;
     align-items: center;
 } */
-.mijn-reizen-button-edit{
+.mijn-reizen-button-edit {
     border: #FFD23F solid 2px;
     border-radius: 12px;
     display: flex;
@@ -303,9 +354,10 @@ ul li::before{
     justify-content: center;
     align-items: center;
 }
-.mijn-reizen-button-boekingen{
+
+.mijn-reizen-button-boekingen {
     border: #FFD23F solid 2px;
-    border-radius: 12px; 
+    border-radius: 12px;
     display: flex;
     width: 10vw;
     height: 50px;
@@ -313,7 +365,8 @@ ul li::before{
     align-items: center;
 
 }
-.mijn-reizen-annuleer-link{
+
+.mijn-reizen-annuleer-link {
     border: #FFD23F solid 2px;
     border-radius: 12px;
     display: flex;
@@ -325,19 +378,21 @@ ul li::before{
 }
 
 /* annuleer */
-#annuleer-titel{
+#annuleer-titel {
     color: #080708;
     justify-self: left;
     font-size: 30px;
 }
-.annuleer-bg-img{
+
+.annuleer-bg-img {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
     position: fixed;
     height: 100vh;
-    width: 100vw; 
+    width: 100vw;
 }
-.annuleer-container{
+
+.annuleer-container {
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
@@ -352,7 +407,8 @@ ul li::before{
     padding-right: 10vh;
     position: relative;
 }
-#annuleer-back-to-mijn-reizen-link{
+
+#annuleer-back-to-mijn-reizen-link {
     color: #080708;
     justify-self: left;
     font-size: 30px;
