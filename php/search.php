@@ -1,23 +1,25 @@
 <script>
-        let open = false;
-        function expand() {
-            if (open) {
-                document.querySelectorAll(".searchbalk").style.height = "50px";
-                expandables  = document.querySelectorAll(".expand");
-                for (element in expandables) {
-                    element.style.display = "inline-block";
-                }
-                open = false;
-            } else {
-                document.querySelectorAll(".searchbalk").style.height = "200px";
-                for (element in expandables) {
-                    element.style.display = "none";
-                }
-                open = true;
+    let open = false;
+    let expandables = document.getElementsByClassName("expand");
+    function expand() {
+        
+        if (open) {
+            document.querySelector(".searchbalk").style.height = "50px";
+            
+            for (let element in expandables) {
+                expandables[element].style.display = "none";
             }
-            return false;
+            open = false;
+        } else {
+            document.querySelector(".searchbalk").style.height = "200px";
+            for (element in expandables) {
+                expandables[element].style.display = "inline-block";
+            }
+            open = true;
         }
-    </script>
+        return false;
+    }
+</script>
 
 <form class="searchbalk" action="resultaat.php">
     <div class="inputWrapper">
