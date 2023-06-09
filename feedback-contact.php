@@ -11,11 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,400;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/floris.css">
+    <link rel="stylesheet" href="css/noud.css">
 </head>
 
 <body>
     <?php
-    require_once('php/nav.php')
+    require_once('php/config.php');
+    require_once('php/nav.php');
+    
     ?><div class="feedback-contact-bg-img">
         <div class="feedback-contact-container">
             <h1 id="feedback-contact-titel">E-Mail verstuurd</h1>

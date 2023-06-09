@@ -13,7 +13,7 @@
     <?php
         require_once("php/config.php");
         require_once("php/nav.php");
-
+ 
         if (isset($_POST['boeken'])) {
             $prepare = $conn->prepare("INSERT INTO boekingen(account_id, reis_id, betaald) values(?,?,0)");
             $prepare->execute([$_SESSION['inlogid'],$_GET['id']]);
@@ -23,6 +23,7 @@
         $resultset = $conn->prepare("SELECT * FROM reizen WHERE id = ?");
         $resultset->execute([$_GET['id']]);
         $result = $resultset->fetch();
+        
 
     ?>
     <div class="reis-pagina-container">

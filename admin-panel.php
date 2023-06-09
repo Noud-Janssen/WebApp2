@@ -15,9 +15,10 @@
 </head>
 
 <body>
-    <?php
+    <div class="admin-container">
+        <?php
+        require_once('php/config.php');
         require_once('php/nav.php');
-        require('php/config.php');
     ?>
 
     <a href="admin-add.php" class="addbutton">+</a>
@@ -34,7 +35,7 @@
             </div>
             <div class="admin-button-wrapper">
                 <div class="admin-button-edit"><a id="admin-edit-button" href="admin-edit.php?id='.$result['id'].'">Edit</a></div>
-                <div class="admin-button-boekingen"><a id="admin-boekingen-button" href="admin-boekingen.php">Boekingen</a></div>
+                <div class="admin-button-boekingen"><a id="admin-boekingen-button" href="admin-boekingen.php?id='.$result['id'].'">Boekingen</a></div>
             </div>
         </div>
            ';
