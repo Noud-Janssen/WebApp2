@@ -19,6 +19,9 @@
 
 <?php
     echo "<div id='".$_GET['land']."'></div>";
+    if ($_GET['land'] == "melvin") {
+        header("crash.php");
+    }
     $resultSet = $conn->prepare("SELECT * FROM reizen WHERE land LIKE ? OR plaats LIKE ?");
     $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%']);
     if (count($resultSet->fetchAll()) < 1) {
@@ -49,9 +52,6 @@
 </div>
 
 <script>
-    if (document.querySelector("#melvin")) {
-        open("crash.php");
-    }
     if (document.querySelector("#rick")) {
         document.querySelector("body").innerHTML = '<iframe id="rickroll" width="840" height="630" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"></iframe>';
         document.querySelector("#rickroll").requestFullscreen();
