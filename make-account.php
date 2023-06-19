@@ -23,11 +23,21 @@
         <h2>E-mail</h2>
         <input type="text" name="email" id="" required>
         <h2>Wachtwoord</h2>
-        <input type="password" name="password" id="" required>
+        <input type="password" name="password" id="password" required>
         <h2>Herhaal wachtwoord</h2>
-        <input type="password" name="passwordRepeat" id="" required>
+        <input type="password" name="passwordRepeat" id="passwordRepeat" required>
         <h2></h2>
-        <input type="submit" name="create" value="create" style="margin-bottom: 10%">
+        <input onclick="return search()" type="submit" name="create" value="create" style="margin-bottom: 10%">
     </form>
+    <script>
+    function search() {
+        if (document.querySelector("#password").value != document.querySelector("#passwordRepeat").value) {
+            alert("Voer hetzelfde wachtwoord in");
+            return false;
+        } else {
+            alert("Account gemaakt")
+        }
+    }
+</script>
 </body>
 </html>

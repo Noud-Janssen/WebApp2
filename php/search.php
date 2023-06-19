@@ -4,17 +4,31 @@
     function expand() {
         var expandables = document.getElementsByClassName("expand");
         if (open) {
-            document.querySelector(".searchbalk").style.height = "50px";
+            document.querySelector("#vertrek-datum2").style.display = "none";
+            document.querySelector("#aankomst-datum2").style.display = "none";
+            document.querySelector("#no-display1").style.display = "none";
             
             open = false;
             return false;
         } else {
-            document.querySelector(".searchbalk").style.height = "100px";
-
+            document.querySelector("#vertrek-datum2").style.display = "inline-block";
+            document.querySelector("#aankomst-datum2").style.display = "inline-block";
+            document.querySelector("#no-display1").style.display = "flex";
             open = true;
             return false;
         }
         return false;
+    }
+
+    function search() {
+        var date1 = new Date(document.querySelector("#vertrek-datum").value);
+        var date1_2 = new Date(document.querySelector("#vertrek-datum2").value);
+        var date2 = new Date(document.querySelector("#aankomst-datum").value);
+        var date2_2 = new Date(document.querySelector("#aankomst-datum2"),value);
+        if (date1 > date2) {
+            alert("Vertek datum moet voor de terugkomstdatum zijn");
+            return false;
+        }
     }
 </script>
 
@@ -28,25 +42,25 @@
         </div>
         <div class="inputWrapper">
             <input type="date" name="vertrekdatum1" class="vertrekdatum" id="vertrek-datum">
-            <input type="date" name="vertrekdatum2" class="vertrekdatum" id="vertrek-datum">
+            <input type="date" name="vertrekdatum2" class="vertrekdatum" id="vertrek-datum2">
         </div>
         <div class="inputWrapper  textWrapper">
             <p>Terugkomst:</p>
         </div>
         <div class="inputWrapper">
             <input type="date" name="terugkomstdatum1" class="vertrekdatum" id="aankomst-datum">
-            <input type="date" name="vertrekdatum2" class="vertrekdatum" id="vertrek-datum2">
+            <input type="date" name="aankomstdatum2" class="vertrekdatum" id="aankomst-datum2">
         </div>
-        <div class="inputWrapper halfwidth">
+        <div class="inputWrapper halfwidth nodisplay" id="no-display1">
             <p>Prijs:</p>
+            <input type="number" name="minprijs" id="minimumpreis" placeholder="Min.">
+            <p>-</p>
+            <input type="number" name="maxprijs" id="maximumpreis" placeholder="Max.">
         </div>
-        <div class="inputWrapper halfwidth">
-            <input type="number" name="minprijs" id="" placeholder="Min.">
-            <input type="number" name="maxprijs" id="" placeholder="Max.">
-        </div>
-        <div class="inputWrapper" id="submit-corner">
-            <input type="submit" value="zoek" id="zoek-knop">
+        
+    </div>
+    <div class="inputWrapper" id="submit-corner">
+            <input type="submit" value="zoek" id="zoek-knop" onclick="return search()">
             <button id="expand-knop" onclick="return expand()">Filters</button>
         </div>
-    </div>
 </form>
