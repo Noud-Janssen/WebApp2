@@ -133,7 +133,7 @@ nav > .link-row > a {
 }
 
 .inputWrapper > input[type=number] {
-    width: max-content;
+    width: 90px;
     border: none;
     border-bottom: 1px solid var(--Gray);
     border-radius: 0;
@@ -167,7 +167,8 @@ nav > .link-row > a {
 }
 
 .searchbalk {
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: baseline;
     flex-wrap: wrap;
     height: 50px;
 }
@@ -189,6 +190,10 @@ nav > .link-row > a {
 #maximumpreis {
     display: none;
     transform: translateY(150%);
+}
+
+.halfwidth {
+    width: 10%;
 }
 
 .transformDown {
