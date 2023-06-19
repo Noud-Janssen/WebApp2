@@ -39,8 +39,7 @@
             <div class="mijn-reizen-button-wrapper">
                 <div class="mijn-reizen-button-edit">
              
-
-                <a class="mijn-reizen-annuleer-link" href="annuleer.php?id='.$result['boekid'].'">Annuleren</a></div>
+                <a class="mijn-reizen-annuleer-link" href="annuleer.php?id=' . $result['boekid'] . '">Annuleren</a></div>
             </div>
         </div>
            ';

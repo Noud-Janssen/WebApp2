@@ -23,7 +23,7 @@
         $resultSet = $conn->prepare("SELECT * FROM reizen WHERE id = ? ");
         $resultSet->execute([$_GET['id']]);
         $resultSet = $conn->query(
-            "SELECT *
+        "SELECT *
         FROM accounts
         INNER JOIN boekingen
         ON accounts.id = boekingen.account_id
@@ -34,6 +34,7 @@
         ?>
         <table>
             <tr>
+                <th>id</th>
                 <th>plek</th>
                 <th>datum begin</th>
                 <th>datum einde</th>
@@ -45,11 +46,12 @@
                 echo
                 ' 
                 <tr>
+                    <td>' . $result['boekid'] . '</td>
                     <td>' . $result['land'] . ', ' . $result['plaats'] . '</td>
                     <td>' . $result['vertrekDatum'] . '</td>
                     <td>' . $result['terugkomstDatum'] . '</td>
                     <td>' . $result['email'] . '</td>
-                    <td><button>annuleren</button></td>
+                    <td><a class="admin-boekingen-annuleer-link" href="admin-annuleer.php?id=' . $result['boekid'] . '">Annuleren</a></td>
                 </tr>
            ';
             }

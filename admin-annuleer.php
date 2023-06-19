@@ -18,16 +18,17 @@
     <?php
     require_once('php/config.php');
     require_once('php/nav.php');
-    
+    $resultset = $conn->query("SELECT * FROM accounts");
     $resultset = $conn->prepare("DELETE FROM boekingen WHERE boekid = ?");
     $resultset->execute([$_GET['id']]);
-
-    ?>
-    <div class="annuleer-bg-img">
+    echo'
+     <div class="annuleer-bg-img">
     </div>
     <div class="annuleer-container">
-            <h1 id="annuleer-titel">Reis succesvol geannuleerd, en klik <a id="annuleer-back-to-mijn-reizen-link" href="mijn-reizen.php">hier</a> om weer terug te gaan naar uw boekingen</h1>
-        </div>
+            <h1 id="annuleer-titel">Reis succesvol geannuleerd. en klik <a id="annuleer-back-to-mijn-reizen-link" href="index.php">hier</a> om weer terug te gaan naar de home page</h1>
+        </div>'
+    ?>
+   
 </body>
 
 </html>
