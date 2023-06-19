@@ -55,9 +55,20 @@
             <li>★★★: Prima maar niks bijzonders. Ook best veel lawaai.</li>
         </ul>
     </div>
-    <a class="admin-button-edit" href="boeken.php?id='.$result['id'].'">Boek nu!</a>
-    </div>
+    
     ';
+    if (isset($_SESSION['inlogid'])) {
+            echo '
+            <a class="admin-button-edit" href="boeken.php?id='.$result['id'].'">Boek nu!</a>
+            </div>
+            ';
+    } else {
+        echo '
+            <p>Login om te boeken.</p>
+            </div>
+            ';
+    }
+    
     ?>
         
 

@@ -110,14 +110,33 @@ nav > .link-row > a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 5px;
+}
+
+.textWrapper {
+    width: 120px;
+}
+
+.textWrapper > input {
+    width: 100px;
 }
 
 .inputWrapper > h3 {
     font-size: 20px;
 }
+
 .inputWrapper > input[type=date] {
     width: max-content;
     border: none;
+    border-bottom: 1px solid var(--Gray);
+    border-radius: 0;
+}
+
+.inputWrapper > input[type=number] {
+    width: max-content;
+    border: none;
+    border-bottom: 1px solid var(--Gray);
+    border-radius: 0;
 }
 
 .inputWrapper > input[type=text] {
@@ -132,7 +151,6 @@ nav > .link-row > a {
 #zoek-knop {
     width: 50%;
     height: 40px;
-    margin-left: 40%;
     border-radius: 10px;
 
 }
@@ -150,12 +168,8 @@ nav > .link-row > a {
 
 .searchbalk {
     justify-content: center;
+    flex-wrap: wrap;
     height: 50px;
-}
-
-.search-row {
-    height: 50px;
-    width: 100%;
 }
 
 .expand {
@@ -175,6 +189,24 @@ nav > .link-row > a {
 #maximumpreis {
     display: none;
     transform: translateY(150%);
+}
+
+.transformDown {
+    transform: translateY(50%);
+}
+
+/* search rows */
+.searchRow {
+    width: 100%;
+    height: 50px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+#srcrow2 {
+    display: none;
+    justify-content: flex-start;
 }
 
 /* admin-edit */
