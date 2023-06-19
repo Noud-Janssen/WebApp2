@@ -292,6 +292,17 @@ tr:nth-child(even) {
     background-color: #99B8FF;
 }
 
+.admin-boekingen-annuleer-link {
+    border: #FFD23F solid 2px;
+    border-radius: 12px;
+    display: flex;
+    width: 10vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #080708;
+}
+
 /* admin edit */
 
 #admin-edit-button {
