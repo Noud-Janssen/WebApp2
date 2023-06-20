@@ -24,9 +24,17 @@
         var date1 = new Date(document.querySelector("#vertrek-datum").value);
         var date1_2 = new Date(document.querySelector("#vertrek-datum2").value);
         var date2 = new Date(document.querySelector("#aankomst-datum").value);
-        var date2_2 = new Date(document.querySelector("#aankomst-datum2"),value);
+        var date2_2 = new Date(document.querySelector("#aankomst-datum2").value);
         if (date1 > date2) {
             alert("Vertek datum moet voor de terugkomstdatum zijn");
+            return false;
+        }
+        if (date1 > date1_2) {
+            alert("Vertrek datum 1 moet voor vertrek datum 2 zijn");
+            return false;
+        }
+        if (date2 > date2_2) {
+            alert("terugkomst datum 1 moet voor terugkomst datum 2 zijn");
             return false;
         }
     }
@@ -53,9 +61,9 @@
         </div>
         <div class="inputWrapper halfwidth nodisplay" id="no-display1">
             <p>Prijs:</p>
-            <input type="number" name="minprijs" id="minimumpreis" placeholder="Min.">
+            <input type="number" name="minprijs" id="minimumpreis" placeholder="Min." value="1">
             <p>-</p>
-            <input type="number" name="maxprijs" id="maximumpreis" placeholder="Max.">
+            <input type="number" name="maxprijs" id="maximumpreis" placeholder="Max." value="">
         </div>
         
     </div>
