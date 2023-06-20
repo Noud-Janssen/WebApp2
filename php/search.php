@@ -1,45 +1,4 @@
-<script>
-    let open = false;
-
-    function expand() {
-        var expandables = document.getElementsByClassName("expand");
-        if (open) {
-            document.querySelector("#vertrek-datum2").style.display = "none";
-            document.querySelector("#aankomst-datum2").style.display = "none";
-            document.querySelector("#no-display1").style.display = "none";
-            
-            open = false;
-            return false;
-        } else {
-            document.querySelector("#vertrek-datum2").style.display = "inline-block";
-            document.querySelector("#aankomst-datum2").style.display = "inline-block";
-            document.querySelector("#no-display1").style.display = "flex";
-            open = true;
-            return false;
-        }
-        return false;
-    }
-
-    function search() {
-        var date1 = new Date(document.querySelector("#vertrek-datum").value);
-        var date1_2 = new Date(document.querySelector("#vertrek-datum2").value);
-        var date2 = new Date(document.querySelector("#aankomst-datum").value);
-        var date2_2 = new Date(document.querySelector("#aankomst-datum2").value);
-        if (date1 > date2) {
-            alert("Vertek datum moet voor de terugkomstdatum zijn");
-            return false;
-        }
-        if (date1 > date1_2) {
-            alert("Vertrek datum 1 moet voor vertrek datum 2 zijn");
-            return false;
-        }
-        if (date2 > date2_2) {
-            alert("terugkomst datum 1 moet voor terugkomst datum 2 zijn");
-            return false;
-        }
-    }
-</script>
-
+<script src="js/main.js"></script>
 <form class="searchbalk" action="resultaat.php">
     <div class="searchRow">
         <div class="inputWrapper down">

@@ -287,3 +287,95 @@ nav > .link-row > a {
         transform: translateX(0%);
     }
 }
+
+.winkelmand {
+    width: 100px;
+    height: 100px;
+}
+
+.winkelmand > input {
+    width: 100px;
+    height: 100px;
+    background-image: url(../assets/images/winkelmand2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Navwinkelmand {
+    width: 10px;
+    height: 80px;
+    background-image: url(../assets/images/winkelmand2.png);
+    text-align: left;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.break {
+    height: 150px;
+}
+
+.ticket {
+    height: 200px;
+    margin-left: calc(30vw - 24%);
+}
+
+.ticket > .adBanner {
+    height: 50%;
+}
+
+.ticket > form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket > form > input {
+    border: none;
+    color: var(--Red);
+}
+
+.sideSum {
+    width: 40%;
+    max-width: 300px;
+    min-height: 400px;
+    height: auto;
+    position: fixed;
+    right: calc(30vw - 20%);
+    bottom: 100px;
+    background-color: var(--White);
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sideSum > div {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sideSum > .line {
+    width: 90%;
+    height: 2px;
+    margin-left: 5%;
+    background-color: var(--Black);
+}
+
+.sideSum > form {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideSum > form > input {
+    border: none;
+    font-size: 18px;
+}

@@ -21,6 +21,15 @@
     $resultSet = $conn->prepare("SELECT * FROM reizen WHERE id = ?");
     $resultSet->execute([$_GET['id']]);
     $result = $resultSet->fetch();
+
+    if (isset($_POST['winkelmand'])) {
+        if (isset($_SESSION['mandje'])) {
+            $_SESSION['mandje'] = $_SESSION['mandje'].$_GET['id'].";";
+        } else {
+            $_SESSION['mandje'] = $_GET['id'].";";
+        }
+    }
+
     if($result['handicap_vriendelijk']==0){
         $handicapresult="nee";
     }else{
@@ -58,10 +67,11 @@
     
     ';
     if (isset($_SESSION['inlogid'])) {
-            echo '
-            <a class="admin-button-edit" href="boeken.php?id='.$result['id'].'">Boek nu!</a>
-            </div>
-            ';
+        echo '<form action="" method="POST" class="winkelmand">
+        <input type="submit" value=" " name="winkelmand">
+        </form>
+        </div>
+        ';
     } else {
         echo '
             <p>Login om te boeken.</p>

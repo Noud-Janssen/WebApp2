@@ -38,7 +38,7 @@
                 $resultSet = $conn->query('SELECT * FROM reizen WHERE isAdvert = 1');
                 while ($result = $resultSet->fetch()) {
                     echo '<div class="advertentie">
-                        <div class="adBanner">
+                        <div class="adBanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
                         </div>
                         <div class="titelRow">
                             <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
@@ -61,7 +61,7 @@
                 $resultSet = $conn->query('SELECT * FROM reizen ORDER BY id DESC LIMIT 4');
                 while ($result = $resultSet->fetch()) {
                     echo '<div class="advertentie">
-                        <div class="adBanner">
+                        <div class="adBanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
                         </div>
                         <div class="titelRow">
                             <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
