@@ -29,8 +29,8 @@
             <a href="http://localhost/WebApp2/resultaat.php?land=Noorwegen&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/noorwegenbg.jpg)"><p>Noorwegen</p></a>
             <a href="http://localhost/WebApp2/resultaat.php?land=Italië&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/italiebg.jpg)"><p>Italië</p></a>
             <a href="http://localhost/WebApp2/resultaat.php?land=Spanje&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/spanjebg.jpg)"><p>Spanje</p></a>
-            <a href="http://localhost/WebApp2/resultaat.php?land=Denemarken&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/denmarkbg.jpg)"><p>Denemarken</p></a>   
-            <a href="http://localhost/WebApp2/resultaat.php?land=Frankrijk&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/francebg.jpg)"><p>Frankrijk</p></a>     
+            <a href="http://localhost/WebApp2/resultaat.php?land=Denemarken&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/denemarkenbg.jpg)"><p>Denemarken</p></a>   
+            <a href="http://localhost/WebApp2/resultaat.php?land=Frankrijk&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/frankrijkbg.jpg)"><p>Frankrijk</p></a>     
         </div>
         <h2>Geadviseerde reizen</h2>
         <div class="advertentieWrapper">

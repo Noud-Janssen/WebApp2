@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/floris.css">
     <link rel="stylesheet" href="css/noud.css">
+    <link rel="stylesheet" href="css/land-foto.css">
 </head>
 
 <body>
@@ -37,7 +38,9 @@
     }
     echo '
     <div class="reis-pagina-container">
-    <div class="reis-foto-container"></div>
+    <div class="';
+    echo ' '.strtolower($result['land']);
+    echo '"></div>
     <div class="reis-info">
     <div class="naam-prijs-balk">
     <h1 id="naam-plek">' . $result['land'] . ', ' . $result['plaats'] . '</h1>
@@ -56,14 +59,6 @@
             <li>' . $result['beschrijving'] . '</li>
         </ul>
     </div>
-    <div class="reis-recensies">
-        <ul>
-            <h2 id="head-lijst">Recensies.</h2>
-            <li>★★★★: Leuke activiteiten om te doen en leuke plek waar je overnacht.</li>
-            <li>★★: Niks leuks aan, maar voor een bus springen is wel een beetje leuk teminste.</li>
-            <li>★★★: Prima maar niks bijzonders. Ook best veel lawaai.</li>
-        </ul>
-    </div>
     
     ';
     if (isset($_SESSION['inlogid'])) {
@@ -78,11 +73,11 @@
             </div>
             ';
     }
-    
+
     ?>
-        
 
 
+    
 
 </body>
 
