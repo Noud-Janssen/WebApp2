@@ -28,22 +28,20 @@
             $prepare->execute([$_SESSION['inlogid'],$var_id[$i]]);
         }
         $_SESSION['mandje'] = "";
+        echo "<div class='break'></div>
+        <h2>Gefeliciteerd met de boeking!</h2>";
     }
 
     if (isset($_POST['verwijder'])) {
-        if ($_POST['index'] == 0) {
-            $_SESSION['mandje'] = substr($_SESSION['mandje'], 2);
-        } else {
-            $var_id = explode(';',$_SESSION['mandje']);
-            $_SESSION['mandje'] = null;
-            $newMandje = $var_id[0].";";
-            for ($i = 1; $i < sizeof($var_id) -1; $i++) {
-                if ($i != $_POST['index']) {
-                    $newMandje = $newMandje.$var_id[$i].";";
-                }   
-            }
-            $_SESSION['mandje'] = $newMandje;
+        $var_id = explode(';',$_SESSION['mandje']);
+        $_SESSION['mandje'] = null;
+        $newMandje = "";
+        for ($i = 0; $i < sizeof($var_id) -1; $i++) {
+            if ($i != $_POST['index']) {
+                $newMandje = $newMandje.$var_id[$i].";";
+            }   
         }
+        $_SESSION['mandje'] = $newMandje;
     }
 
     if (isset($_SESSION['mandje']) && sizeof(explode(';',$_SESSION['mandje'])) > 1) {
@@ -79,20 +77,20 @@
             $prepared = $conn->prepare("SELECT * FROM reizen WHERE id = ?");
             $prepared->execute([$var_id[$i]]);
             $result = $prepared->fetch();
-            echo "<div><p>".$result['land']."</p><p>".$result['preis']."</p></div>";
+            echo "<div><p>".$result['land']."</p><p>€".$result['preis']."</p></div>";
             $sum += (int)$result['preis'];
         }
 
         echo "
             <div class='line'></div>
-            <div><p>Totaal:</p><p>".$sum."</p></div>
+            <div><p>Totaal:</p><p>€".$sum."</p></div>
             <form action='' method='post'>
                 <input type='submit' value='Boeken' name='boeken'>
             </form>
 
         </div>";
 
-    } else {
+    } else if (!isset($_POST['boeken'])) {
         echo "
         <div class='break'></div>
         <h2>Je hebt nog niks in je winkelmand.</h2>

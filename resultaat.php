@@ -22,17 +22,47 @@
     if ($_GET['land'] == "melvin") {
         header("crash.php");
     }
-    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE land LIKE ? OR plaats LIKE ?");
-    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%']);
+    echo $date1 = date("y-m-d");
+    $date1_2 = "6000-1-1";
+    $date2 = date("y-m-d");
+    $date2_2 = "6000-1-1";
+
+    $prijs1 = 1;
+    $prijs2 = 2000;
+
+    if (isset($_GET['vertrekdatum1'])) {
+        $_GET['vertrekdatum1'];
+        $date1 = $_GET['vertrekdatum1'];
+        $date1_2 = $_GET['vertrekdatum1'];
+    }
+    if (isset($_GET['vertrekdatum2'])) {
+        $date1_2 = $_GET['vertrekdatum2'];
+    }
+    if (isset($_GET['terugkomstdatum1'])) {
+        $date2 = $_GET['terugkomstdatum1'];
+        $date2_2 = $_GET['terugkomstdatum1'];
+    }
+    if (isset($_GET['terugkomstdatum2'])) {
+        $date2_2 = $_GET['terugkomstdatum2'];
+    }
+    if (isset($_GET['minprijs'])) {
+        $prijs1 = $_GET['minprijs'];
+    }
+    if (isset($_GET['maxprijs'])) {
+        $prijs2 = $_GET['maxprijs'];
+    }
+
+    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE (land LIKE ? OR plaats LIKE ?) AND (DATE(vertrekDatum) BETWEEN ? AND ?) AND (DATE(terugkomstDatum) BETWEEN ? AND ?) AND (preis BETWEEN ? AND ? )");
+    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%',$date1,$date1_2,$date2,$date2_2,$prijs1,$prijs2]);
     if (count($resultSet->fetchAll()) < 1) {
         echo "<h2>Geen resultaten gevonden</h2>";
     }
-    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE land LIKE ? OR plaats LIKE ?");
-    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%']);
+    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE (land LIKE ? OR plaats LIKE ?) AND (DATE(vertrekDatum) BETWEEN ? AND ?) AND (DATE(terugkomstDatum) BETWEEN ? AND ?) AND (preis BETWEEN ? AND ? )");
+    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%',$date1,$date1_2,$date2,$date2_2,$prijs1,$prijs2]);
 
     while ($result = $resultSet->fetch()) {
         echo '<div class="advertentie">
-                    <div class="adBanner">
+                    <div class="adBanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
                     </div>
                     <div class="titelRow">
                         <h3>'.$result['land'].' - '.$result['plaats'].'</h3>

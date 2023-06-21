@@ -16,7 +16,7 @@
         </div>
         <div class="inputWrapper">
             <input type="date" name="terugkomstdatum1" class="vertrekdatum" id="aankomst-datum">
-            <input type="date" name="aankomstdatum2" class="vertrekdatum" id="aankomst-datum2">
+            <input type="date" name="terugkomstdatum2" class="vertrekdatum" id="aankomst-datum2">
         </div>
         <div class="inputWrapper halfwidth nodisplay" id="no-display1">
             <p>Prijs:</p>
