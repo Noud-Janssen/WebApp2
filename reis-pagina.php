@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/floris.css">
     <link rel="stylesheet" href="css/noud.css">
+    <link rel="stylesheet" href="css/land-foto.css">
 </head>
 
 <body>
@@ -21,14 +22,16 @@
     $resultSet = $conn->prepare("SELECT * FROM reizen WHERE id = ?");
     $resultSet->execute([$_GET['id']]);
     $result = $resultSet->fetch();
-    if($result['handicap_vriendelijk']==0){
-        $handicapresult="nee";
-    }else{
-        $handicapresult="ja";
+    if ($result['handicap_vriendelijk'] == 0) {
+        $handicapresult = "nee";
+    } else {
+        $handicapresult = "ja";
     }
     echo '
     <div class="reis-pagina-container">
-    <div class="reis-foto-container"></div>
+    <div class="';
+    echo ' '.strtolower($result['land']);
+    echo '"></div>
     <div class="reis-info">
     <div class="naam-prijs-balk">
     <h1 id="naam-plek">' . $result['land'] . ', ' . $result['plaats'] . '</h1>
@@ -47,19 +50,12 @@
             <li>' . $result['beschrijving'] . '</li>
         </ul>
     </div>
-    <div class="reis-recensies">
-        <ul>
-            <h2 id="head-lijst">Recensies.</h2>
-            <li>★★★★: Leuke activiteiten om te doen en leuke plek waar je overnacht.</li>
-            <li>★★: Niks leuks aan, maar voor een bus springen is wel een beetje leuk teminste.</li>
-            <li>★★★: Prima maar niks bijzonders. Ook best veel lawaai.</li>
-        </ul>
-    </div>
     
     ';
     if (isset($_SESSION['inlogid'])) {
-            echo '
-            <a class="admin-button-edit" href="boeken.php?id='.$result['id'].'">Boek nu!</a>
+        echo '
+            <a class="admin-button-edit" href="boeken.php?id=' . $result['id'] . '">Boek nu!</a>
+            <a class="admin-button-edit" href="recensies.php?id=' . $result['id'] . '">Maak Recensie</a>
             </div>
             ';
     } else {
@@ -68,11 +64,11 @@
             </div>
             ';
     }
-    
+
     ?>
-        
 
 
+    
 
 </body>
 

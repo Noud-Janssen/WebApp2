@@ -3,7 +3,7 @@
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
-    height: fit-content;
+    height: 84vh;
     width: auto;
     font-size: 20px;
     font-weight: bold;
@@ -39,13 +39,16 @@
 #feedback-contact-titel {
     color: #080708;
 }
+textarea{
+    resize: none;
+}
 
 /* over ons */
 .over-ons-container {
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
-    height: fit-content;
+    height: 84vh;
     width: auto;
     font-size: 20px;
     font-weight: bold;
@@ -71,7 +74,6 @@
 .over-ons-bg-img {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
-
 }
 
 /* reis pagina */
@@ -254,6 +256,7 @@ ul li::before {
     height: 50px;
     justify-content: center;
     align-items: center;
+    color: #080708;
 }
 
 .admin-button-boekingen {
