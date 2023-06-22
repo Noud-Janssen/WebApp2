@@ -3,7 +3,7 @@
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
-    height: 84vh;
+    height: fit-content;
     width: auto;
     font-size: 20px;
     font-weight: bold;
@@ -18,6 +18,9 @@
 .contact-bg-img {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
 }
 
 .feedback-contact-container {
@@ -40,7 +43,9 @@
     color: #080708;
 }
 textarea{
-    resize: none;
+    width: 200px;
+    height: 100px;
+
 }
 
 /* over ons */
@@ -48,7 +53,7 @@ textarea{
     padding: 2vh;
     color: #080708;
     background-color: #fef9ffb1;
-    height: 84vh;
+    height: fit-content;
     width: auto;
     font-size: 20px;
     font-weight: bold;
@@ -58,6 +63,7 @@ textarea{
     padding-left: 10vh;
     padding-right: 10vh;
     position: relative;
+    display: inline-block;
 }
 
 #over-ons-titel {
@@ -74,6 +80,9 @@ textarea{
 .over-ons-bg-img {
     background: url(../assets/images/strand.jpeg);
     background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* reis pagina */
@@ -159,6 +168,10 @@ ul li::before {
     justify-content: space-between;
     border-bottom: var(--Blue)solid 2px;
 
+}
+.reis-pagina-link-container{
+    display: flex;
+    flex-direction: row;
 }
 
 /* voorwaarden */
@@ -252,7 +265,7 @@ ul li::before {
     border: #FFD23F solid 2px;
     border-radius: 12px;
     display: flex;
-    width: 10vw;
+    width: fit-content;
     height: 50px;
     justify-content: center;
     align-items: center;
@@ -263,7 +276,7 @@ ul li::before {
     border: #FFD23F solid 2px;
     border-radius: 12px;
     display: flex;
-    width: 10vw;
+    width: fit-content;
     height: 50px;
     justify-content: center;
     align-items: center;
@@ -427,4 +440,19 @@ tr:nth-child(even) {
     justify-self: left;
     font-size: 30px;
     text-decoration: underline black solid;
+}
+
+/* recensies */
+
+.ster{
+    height: 100px;
+    width: 100px;
+}
+.ster > input{
+    height: 100px;
+    width: 100px;
+    background-image: url(../assets/images/ster.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain    ;
 }

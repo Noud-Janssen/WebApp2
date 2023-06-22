@@ -237,6 +237,7 @@ nav > h1 {
 }
 
 .landIMG > p {
+    
     transition-duration: 250ms;
     width: 80%;
     padding: 10%;

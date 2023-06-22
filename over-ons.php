@@ -20,8 +20,9 @@
     require_once('php/nav.php');
     
     ?>
-    <div class="over-ons-bg-img">
-        <div class="over-ons-container">
+    <div class="over-ons-bg-img">    
+    </div>
+    <div class="over-ons-container">
             <h1 id="over-ons-titel">Over Ons</h1>
             <p>Welkom bij onze reisorganisatie! Wij zijn een gepassioneerd team van reisexperts die er alles aan doen om uw droomreis werkelijkheid te maken.</p>
             <br>
@@ -39,7 +40,6 @@
             <br>
             <p>Wilt u contact met ons opnemen ga dan naar <a id="over-to-contact-link" href="contact.php">hier</a>.</p>
         </div>
-    </div>
 
 </body>
 

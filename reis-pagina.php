@@ -25,27 +25,27 @@
 
     if (isset($_POST['winkelmand'])) {
         if (isset($_SESSION['mandje'])) {
-            $_SESSION['mandje'] = $_SESSION['mandje'].$_GET['id'].";";
+            $_SESSION['mandje'] = $_SESSION['mandje'] . $_GET['id'] . ";";
         } else {
-            $_SESSION['mandje'] = $_GET['id'].";";
+            $_SESSION['mandje'] = $_GET['id'] . ";";
         }
     }
 
-    if($result['handicap_vriendelijk']==0){
-        $handicapresult="nee";
-    }else{
-        $handicapresult="ja";
+    if ($result['handicap_vriendelijk'] == 0) {
+        $handicapresult = "nee";
+    } else {
+        $handicapresult = "ja";
     }
     echo '
     <div class="reis-pagina-container">
     <div class="';
-    echo ' '.strtolower($result['land']);
+    echo ' ' . strtolower($result['land']);
     echo '"></div>
     <div class="reis-info">
     <div class="naam-prijs-balk">
     <h1 id="naam-plek">' . $result['land'] . ', ' . $result['plaats'] . '</h1>
     <h1 id="prijs">€' . $result['preis'] . '</h1>
-</div>
+    </div>
         <h2>Reis Planning: ' . $result['vertrekDatum'] . ' tot ' . $result['terugkomstDatum'] . '</h2>
         <ul>
             <h2 id="head-lijst">Informatie.</h2>
@@ -58,26 +58,60 @@
             <h2 id="head-lijst">Beschrijving.</h2>
             <li>' . $result['beschrijving'] . '</li>
         </ul>
-    </div>
+   
     
     ';
     if (isset($_SESSION['inlogid'])) {
-        echo '<form action="" method="POST" class="winkelmand">
-        <input type="submit" value=" " name="winkelmand">
-        </form>
+        echo ' <div class="reis-pagina-link-container">
+        <form action="" method="POST" class="winkelmand">
+            <input type="submit" value=" " name="winkelmand">
+            </form>
+            <form action="recensies.php?id=' . $_GET['id'] . '" method="POST" class="ster">
+            <input type="submit" value=" " name="ster">
+            </form>
+            </div>
         </div>
         ';
     } else {
         echo '
-            <p>Login om te boeken.</p>
+            <p>Login om te boeken. Of om een recensie te plaatsen.</p>
             </div>
             ';
     }
+    $resultSet = $conn->query('SELECT *
+    FROM recensies
+    INNER JOIN accounts
+    ON recensies.account_id = accounts.id');
+    echo'<h2 id="head-lijst">Recensies.</h2>';
+    if($result = $resultSet->fetch()) {
+        echo '
+        <ul>
+        <li>';
+            for ($i = 1; $i <= $result['sterren']; $i++) {
+                echo '★';
+            }
+            echo '  ' . $result['email'] . ': '. $result['recensie'] .'</li>
+        </ul> ';
+    } else {
+        echo "geen recensies";
+    }
+    while ($result = $resultSet->fetch()) {
+        echo '
+    <ul>
+    
+    <li>';
+        for ($i = 1; $i <= $result['sterren']; $i++) {
+            echo '★';
+        }
+        echo '  ' . $result['email'] . ': '. $result['recensie'] .'</li>
+    </ul> ';
+    }
+
 
     ?>
 
 
-    
+    </div>
 
 </body>
 
