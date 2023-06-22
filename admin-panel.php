@@ -29,15 +29,15 @@
         while ($result = $resultSet->fetch()) {
             echo
             ' 
-            <div class="admin-reis-item">
-            <div class="admin-head-text">
-                <h2 id="admin-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
+            <div class="admin-reis-item adbanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
+                <div class="admin-head-text">
+                    <h2 id="admin-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
+                </div>
+                <div class="admin-button-wrapper">
+                    <a id="admin-edit-button" href="admin-edit.php?id='.$result['id'].'">Edit</a>
+                    <a id="admin-boekingen-button" href="admin-boekingen.php?id='.$result['id'].'">Boekingen</a>
+                </div>
             </div>
-            <div class="admin-button-wrapper">
-                <div class="admin-button-edit"><a id="admin-edit-button" href="admin-edit.php?id='.$result['id'].'">Edit</a></div>
-                <div class="admin-button-boekingen"><a id="admin-boekingen-button" href="admin-boekingen.php?id='.$result['id'].'">Boekingen</a></div>
-            </div>
-        </div>
            ';
         }
         ?>

@@ -225,29 +225,41 @@ ul li::before {
 
 .admin-reis-item {
     box-shadow: var(--shadow);
-    margin-left: 6vh;
-    margin-right: 6vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
     margin-bottom: 6vh;
     margin-top: 5vh;
-    padding: 7px;
     border-radius: 12px;
     width: 40VW;
+    max-width: 300px;
     height: 200px;
     font-size: larger;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
 }
 
 #admin-land-plaats-text {
-    color: #080708;
+    color: var(--Black);
+    font-size: min(3vw, 24px);
 }
 
 .admin-head-text {
     box-shadow: var(--shadow);
     border-radius: 12px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: var(--White);
 }
 
 .admin-button-wrapper {
     display: flex;
+    width: 100%;
+    background-color: var(--White);
+    border-radius: 12px;
     justify-content: space-evenly;
     margin-top: 17%;
 }
@@ -262,33 +274,31 @@ ul li::before {
     align-items: center;
 } */
 .admin-button-edit {
-    border: #FFD23F solid 2px;
     border-radius: 12px;
     display: flex;
-    width: fit-content;
+    width: 10vw;
     height: 50px;
+    font-size: min(2vw, 24px);
     justify-content: center;
     align-items: center;
-    color: #080708;
+    color: var(--Red);
+    background-color: var(--White);
 }
 
 .admin-button-boekingen {
-    border: #FFD23F solid 2px;
     border-radius: 12px;
     display: flex;
-    width: fit-content;
+    width: 10vw;
     height: 50px;
+    font-size: min(2vw, 24px);
     justify-content: center;
     align-items: center;
+    color: var(--Red);
+    background-color: var(--White);
 
 }
 
 /* admin boekingen */
-
-#admin-boekingen-button {
-    color: black;
-}
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -309,20 +319,38 @@ tr:nth-child(even) {
 }
 
 .admin-boekingen-annuleer-link {
-    border: #FFD23F solid 2px;
+    display: flex;
+    width: auto;
+    height: auto;
+    font-size: min(2vw, 24px);
+    justify-content: center;
+    align-items: center;
+    color: var(--Red);
+}
+#admin-boekingen-button {
     border-radius: 12px;
     display: flex;
     width: 10vw;
     height: 50px;
+    font-size: min(2vw, 24px);
     justify-content: center;
     align-items: center;
-    color: #080708;
+    color: var(--Blue);
+    background-color: var(--White);
 }
 
 /* admin edit */
 
 #admin-edit-button {
-    color: black;
+    border-radius: 12px;
+    display: flex;
+    width: 10vw;
+    height: 50px;
+    font-size: min(2vw, 24px);
+    justify-content: center;
+    align-items: center;
+    color: var(--Blue);
+    background-color: var(--White);
 }
 
 /* mijn reizen */
@@ -336,25 +364,31 @@ tr:nth-child(even) {
 
 .mijn-reizen-reis-item {
     box-shadow: var(--shadow);
-    margin-left: 6vh;
-    margin-right: 6vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
     margin-bottom: 6vh;
     margin-top: 5vh;
     padding: 7px;
     border-radius: 12px;
     width: 40VW;
+    max-width: 300px;
     height: 200px;
     font-size: larger;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #mijn-reizen-land-plaats-text {
-    color: #080708;
+    color: var(--Black);
+    font-size: min(3vw, 24px);
 }
 
 .mijn-reizen-head-text {
     box-shadow: var(--shadow);
     border-radius: 12px;
+    background-color: var(--White);
 }
 
 .mijn-reizen-button-wrapper {
@@ -394,14 +428,20 @@ tr:nth-child(even) {
 }
 
 .mijn-reizen-annuleer-link {
-    border: #FFD23F solid 2px;
     border-radius: 12px;
     display: flex;
     width: 10vw;
     height: 50px;
+    font-size: min(2vw, 24px);
     justify-content: center;
     align-items: center;
-    color: #080708;
+    color: var(--Red);
+    background-color: var(--White);
+}
+
+.mijn-reizen-info-link {
+    color: var(--Blue);
+    font-size: 14px;
 }
 
 /* annuleer */

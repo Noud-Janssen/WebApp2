@@ -26,11 +26,11 @@
 
         <h2>Waar wilt u heen?</h2>
         <div class="landenWrapper">
-            <a href="http://localhost/WebApp2/resultaat.php?land=Noorwegen&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/noorwegenbg.jpg)"><p>Noorwegen</p></a>
-            <a href="http://localhost/WebApp2/resultaat.php?land=Italië&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/italiebg.jpg)"><p>Italië</p></a>
-            <a href="http://localhost/WebApp2/resultaat.php?land=Spanje&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/spanjebg.jpg)"><p>Spanje</p></a>
-            <a href="http://localhost/WebApp2/resultaat.php?land=Denemarken&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/denemarkenbg.jpg)"><p>Denemarken</p></a>   
-            <a href="http://localhost/WebApp2/resultaat.php?land=Frankrijk&vertrekdatum=&terugkomstdatum=" class="landIMG" style="background-image: url(assets/images/frankrijkbg.jpg)"><p>Frankrijk</p></a>     
+            <a href="resultaat.php?land=Noorwegen&vertrekdatum1=&vertrekdatum2=&terugkomstdatum1=&terugkomstdatum2=&minprijs=1&maxprijs=" class="landIMG" style="background-image: url(assets/images/noorwegenbg.jpg)"><p>Noorwegen</p></a>
+            <a href="resultaat.php?land=Itali%C3%AB&vertrekdatum1=&vertrekdatum2=&terugkomstdatum1=&terugkomstdatum2=&minprijs=1&maxprijs=" class="landIMG" style="background-image: url(assets/images/italiebg.jpg)"><p>Italië</p></a>
+            <a href="resultaat.php?land=Spanje&vertrekdatum1=&vertrekdatum2=&terugkomstdatum1=&terugkomstdatum2=&minprijs=1&maxprijs=" class="landIMG" style="background-image: url(assets/images/spanjebg.jpg)"><p>Spanje</p></a>
+            <a href="resultaat.php?land=Denemarken&vertrekdatum1=&vertrekdatum2=&terugkomstdatum1=&terugkomstdatum2=&minprijs=1&maxprijs=" class="landIMG" style="background-image: url(assets/images/denemarkenbg.jpg)"><p>Denemarken</p></a>   
+            <a href="resultaat.php?land=Frankrijk&vertrekdatum1=&vertrekdatum2=&terugkomstdatum1=&terugkomstdatum2=&minprijs=1&maxprijs=" class="landIMG" style="background-image: url(assets/images/frankrijkbg.jpg)"><p>Frankrijk</p></a>     
         </div>
         <h2>Geadviseerde reizen</h2>
         <div class="advertentieWrapper">

@@ -78,10 +78,11 @@
             </div>
             ';
     }
-    $resultSet = $conn->query('SELECT *
+    $resultSet = $conn->prepare('SELECT *
     FROM recensies
     INNER JOIN accounts
-    ON recensies.account_id = accounts.id');
+    ON recensies.account_id = accounts.id WHERE recensies.reis_id = ?');
+    $resultSet->execute([$_GET['id']]);
     echo'<h2 id="head-lijst">Recensies.</h2>';
     if($result = $resultSet->fetch()) {
         echo '

@@ -36,9 +36,9 @@
             <tr>
                 <th>id</th>
                 <th>plek</th>
-                <th>datum begin</th>
-                <th>datum einde</th>
-                <th>email(van booker)</th>
+                <th>begin-datum</th>
+                <th>eind-datum</th>
+                <th>email(van boeker)</th>
                 <th>annuleren</th>
             </tr>
             <?php

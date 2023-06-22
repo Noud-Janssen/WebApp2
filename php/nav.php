@@ -18,8 +18,7 @@
                 echo "<div id='accountButton'>Account
                 <div id='accountOptions'>
                     <h3>Account</h3>
-                    <a href='mijn-reizen.php'>Mijn Boekingen</a>
-                    <a href='mijn-account.php'>Mijn account</a>
+                    <a href='mijn-reizen.php' class='Navboeken'>Boekingen</a>
                     <a href='mandje.php' class='Navwinkelmand'>Mandje</a>";
                     if ($result['isadmin'] == 1) {
                         echo "<a href='admin-panel.php'>Admin panel</a>'";

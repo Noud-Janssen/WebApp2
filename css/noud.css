@@ -15,7 +15,7 @@ nav > .link-row > a {
 #accountButton {
     text-decoration: none;
     color: var(--White);
-    font-size: 25px;
+    font-size: 2vw;
     width: 200px;
     cursor: pointer;
     text-align: center;
@@ -304,8 +304,18 @@ nav > .link-row > a {
 
 .Navwinkelmand {
     width: 10px;
-    height: 80px;
+    height: auto;
     background-image: url(../assets/images/winkelmand2.png);
+    text-align: left;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.Navboeken {
+    width: 10px;
+    height: auto;
+    background-image: url(../assets/images/book1.png);
     text-align: left;
     background-size: contain;
     background-position: right;

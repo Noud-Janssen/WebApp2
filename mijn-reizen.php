@@ -32,20 +32,17 @@
         while ($result = $resultSet->fetch()) {
             echo
             ' 
-            <div class="mijn-reizen-reis-item">
-            <div class="mijn-reizen-head-text">
-                <h2 id="mijn-reizen-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
+            <div href="reis-pagina.php?id='.$result['id'].'" class="mijn-reizen-reis-item adBanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
+                <div class="mijn-reizen-head-text">
+                    <h2 id="mijn-reizen-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
+                </div>
+                <div class="mijn-reizen-button-wrapper">
+                    <a class="mijn-reizen-annuleer-link" href="annuleer.php?id=' . $result['boekid'] . '">Annuleren</a>
+                </div>
             </div>
-            <div class="mijn-reizen-button-wrapper">
-                <div class="mijn-reizen-button-edit">
-             
-                <a class="mijn-reizen-annuleer-link" href="annuleer.php?id=' . $result['boekid'] . '">Annuleren</a></div>
-            </div>
-        </div>
            ';
         }
         ?>
-        <!-- <a id="mijn-reizen-edit-button" href="-edit.php?id=' . $result['id'] . '">annuleren</a> -->
     </div>
 </body>
 
