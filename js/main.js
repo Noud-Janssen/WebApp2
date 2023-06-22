@@ -1,15 +1,11 @@
 let open = false;
 function expand() {
-    if (open) {
-        document.querySelector("#vertrek-datum2").style.display = "none";
-        document.querySelector("#aankomst-datum2").style.display = "none";
+    if (open) { 
         document.querySelector("#no-display1").style.display = "none";
         
         open = false;
         return false;
     } else {
-        document.querySelector("#vertrek-datum2").style.display = "inline-block";
-        document.querySelector("#aankomst-datum2").style.display = "inline-block";
         document.querySelector("#no-display1").style.display = "flex";
         open = true;
         return false;

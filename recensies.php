@@ -36,7 +36,7 @@
         <h3>recensie: </h3>
         <textarea name="recensie" id="" cols="30" rows="10" maxlength="150"></textarea>
         <h3>aantal sterren (1-5): </h3>
-        <input class="admin-button-edit" name="sterren" type="number" min="1" max="5" value="1">
+        <input style="color: var(--Black)"  class="admin-button-edit" name="sterren" type="number" min="1" max="5" value="1">
         <br>
         <br>
         <h3>Naam recensie schrijver: </h3>
@@ -44,7 +44,7 @@
         <br>
         <br>
 
-        <input class="admin-button-edit" name="recensie_posten" type="submit" value="recensie">
+        <input style="color: var(--Black)" class="admin-button-edit" name="recensie_posten" type="submit" value="recensie">
     </form>
 </body>
 

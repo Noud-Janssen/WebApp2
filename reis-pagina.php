@@ -56,11 +56,12 @@
         </ul>
         <ul>
             <h2 id="head-lijst">Beschrijving.</h2>
-            <li>' . $result['beschrijving'] . '</li>
+            <p>' . $result['beschrijving'] . '</p>
         </ul>
    
     
     ';
+    echo '<div class="break"></div>';
     if (isset($_SESSION['inlogid'])) {
         echo ' <div class="reis-pagina-link-container">
         <form action="" method="POST" class="winkelmand">
@@ -78,6 +79,13 @@
             </div>
             ';
     }
+    
+
+
+    echo "</div>
+        <div class='reis-pagina-container'>"
+    ;
+
     $resultSet = $conn->prepare('SELECT *
     FROM recensies
     INNER JOIN accounts
@@ -105,15 +113,11 @@
             echo '★';
         }
         echo '  ' . $result['email'] . ': '. $result['recensie'] .'</li>
-    </ul> ';
+    </ul> </div>';
     }
 
 
     ?>
-
-
-    </div>
-
 </body>
 
 </html>

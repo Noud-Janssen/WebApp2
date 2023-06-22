@@ -485,12 +485,12 @@ tr:nth-child(even) {
 /* recensies */
 
 .ster{
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 .ster > input{
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     background-image: url(../assets/images/ster.png);
     background-position: center;
     background-repeat: no-repeat;

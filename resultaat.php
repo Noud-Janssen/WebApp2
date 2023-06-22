@@ -22,14 +22,6 @@
     if ($_GET['land'] == "melvin") {
         header("crash.php");
     }
-    $date1 = date("Y-m-d");
-    $date1_2 = "6000-01-01";
-    $date2 = date("Y-m-d");
-    $date2_2 = "6000-01-01";
-    echo $date1;
-    echo $date2;
-    echo $date1_2;
-    echo $date2_2;
 
     $prijs1 = 1;
     $prijs2 = 2000;
@@ -56,13 +48,13 @@
         $prijs2 = $_GET['maxprijs'];
     }
 
-    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE (land LIKE ? OR plaats LIKE ?) AND (vertrekDatum BETWEEN ? AND ?) AND (terugkomstDatum BETWEEN ? AND ?) AND (preis BETWEEN ? AND ? )");
-    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%',$date1,$date1_2,$date2,$date2_2,$prijs1,$prijs2]);
+    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE (land LIKE ? OR plaats LIKE ?) AND (DATE(vertrekDatum) BETWEEN ? AND ?) AND (DATE(terugkomstDatum) BETWEEN ? AND ?) AND (preis BETWEEN ? AND ? )");
+    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%',$_GET['vertrekdatum1'],$_GET['vertrekdatum2'],$_GET['terugkomstdatum1'],$_GET['terugkomstdatum2'],$_GET['minprijs'],$_GET['maxprijs']]);
     if (count($resultSet->fetchAll()) < 1) {
         echo "<h2>Geen resultaten gevonden</h2>";
     }
-    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE (land LIKE ? OR plaats LIKE ?) AND (vertrekDatum BETWEEN ? AND ?) AND (terugkomstDatum BETWEEN ? AND ?) AND (preis BETWEEN ? AND ? )");
-    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%',$date1,$date1_2,$date2,$date2_2,$prijs1,$prijs2]);
+    $resultSet = $conn->prepare("SELECT * FROM reizen WHERE (land LIKE ? OR plaats LIKE ?) AND (DATE(vertrekDatum) BETWEEN ? AND ?) AND (DATE(terugkomstDatum) BETWEEN ? AND ?) AND (preis BETWEEN ? AND ? )");
+    $resultSet->execute(['%'.$_GET['land'].'%','%'.$_GET['land'].'%',$_GET['vertrekdatum1'],$_GET['vertrekdatum2'],$_GET['terugkomstdatum1'],$_GET['terugkomstdatum2'],$_GET['minprijs'],$_GET['maxprijs']]);
     while ($result = $resultSet->fetch()) {
         echo '<div class="advertentie">
                     <div class="adBanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
