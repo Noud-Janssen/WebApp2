@@ -62,6 +62,7 @@
                 $_POST['oppervlakte'],
                 $handicap
             ]);
+            header("Location: admin-panel.php");
         }
 
     ?>
