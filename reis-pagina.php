@@ -79,45 +79,47 @@
             </div>
             ';
     }
-    
+
 
 
     echo "</div>
-        <div class='reis-pagina-container'>"
-    ;
-
-    $resultSet = $conn->prepare('SELECT *
+        <div class='reis-pagina-container'>";
+    ?>
+    <div>
+        <?php
+        $resultSet = $conn->prepare('SELECT *
     FROM recensies
     INNER JOIN accounts
     ON recensies.account_id = accounts.id WHERE recensies.reis_id = ?');
-    $resultSet->execute([$_GET['id']]);
-    echo'<h2 id="head-lijst">Recensies.</h2>';
-    if($result = $resultSet->fetch()) {
-        echo '
+        $resultSet->execute([$_GET['id']]);
+        echo '<h2 id="head-lijst">Recensies.</h2>';
+        if ($result = $resultSet->fetch()) {
+            echo '
         <ul>
         <li>';
             for ($i = 1; $i <= $result['sterren']; $i++) {
                 echo '★';
             }
-            echo '  ' . $result['email'] . ': '. $result['recensie'] .'</li>
+            echo '  ' . $result['email'] . ': ' . $result['recensie'] . '</li>
         </ul> ';
-    } else {
-        echo "geen recensies";
-    }
-    while ($result = $resultSet->fetch()) {
-        echo '
+        } else {
+            echo "geen recensies";
+        }
+        while ($result = $resultSet->fetch()) {
+            echo '
     <ul>
     
     <li>';
-        for ($i = 1; $i <= $result['sterren']; $i++) {
-            echo '★';
-        }
-        echo '  ' . $result['email'] . ': '. $result['recensie'] .'</li>
+            for ($i = 1; $i <= $result['sterren']; $i++) {
+                echo '★';
+            }
+            echo '  ' . $result['email'] . ': ' . $result['recensie'] . '</li>
     </ul> </div>';
-    }
+        }
 
 
-    ?>
+        ?>
+    </div>
 </body>
 
 </html>

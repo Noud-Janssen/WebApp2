@@ -47,6 +47,18 @@ textarea{
     height: 100px;
 
 }
+#contact-text-h2{
+    color: #080708;
+    display: flex;
+    justify-content: baseline;
+}
+#contact-input-text{
+    display: flex;
+    justify-content: baseline;
+    height: auto;
+    width: 100%;
+    text-align: initial;
+}
 
 /* over ons */
 .over-ons-container {
@@ -173,6 +185,7 @@ ul li::before {
     display: flex;
     flex-direction: row;
 }
+
 
 /* voorwaarden */
 #voorwaarden-titel {
