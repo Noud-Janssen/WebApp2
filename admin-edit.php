@@ -64,6 +64,12 @@
             ]);
         }
 
+        if (isset($_POST['delete'])) {
+            $prepared = $conn->prepare("DELETE FROM reizen WHERE id = ?");
+            $prepared->execute([$_GET['id']]);
+            header("Location: admin-panel.php");
+        }
+
         $resultset = $conn->prepare("SELECT * FROM reizen WHERE id = ?");
         $resultset->execute([$_GET['id']]);
         $result = $resultset->fetch();
@@ -99,7 +105,7 @@
         <div class="label">Is advertentie</div>
         <input type="checkbox" name="isAdvert" id="" <?php if ($result['isAdvert']) {echo "checked";} ?>>
         <input type="submit" name="update" value="update">
-        <input type="submit" value="delete">
+        <input type="submit" name="delete" value="delete">
     </form>
 </body>
 
