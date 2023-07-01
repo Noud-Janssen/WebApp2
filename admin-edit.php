@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/noud.css">
 </head>
 <body>
+    <div class="break"></div>
     <?php
         require_once('php/config.php');
         require_once('php/nav.php');
@@ -75,37 +76,55 @@
         $result = $resultset->fetch();
 
     ?>
-    <form class="edit-container" method="post">
-        <h2>Basis informatie</h2>
-        <div class="label">Land</div>
-        <input type="text" name="land" class="w50" id="" <?php echo 'value="'.$result['land'].'"'?>>
-        <div class="label">Plaats</div>
-        <input type="text" name="plaats" class="w50" id="" <?php echo 'value="'.$result['plaats'].'"'?>>
-        <div class="label">Prijs</div>
-        <input type="number" name="prijs" id="" min="50" <?php echo 'value="'.$result['preis'].'"'?>>
-        <div class="label">Beschrijving</div>
-        <textarea name="beschrijving" id="" cols="30" rows="10"><?php echo $result['beschrijving']?></textarea>
-        <h2>Datums</h2>
-        <div class="label">Vertrek datum</div>
-        <input type="date" name="vertrekDatum" id="" <?php echo 'value="'.$result['vertrekDatum'].'"'?>>
-        <div class="label">Terugkomst datum</div>
-        <input type="date" name="terugkomstDatum" id="" <?php echo 'value="'.$result['terugkomstDatum'].'"'?>>
-        <h2>Voorzieningen</h2>
-        <div class="label ">Aantal wc's</div>
-        <input type="number" name="wc" id="" <?php echo 'value="'.$result['wc'].'"'?> max="10" min="0">
-        <div class="label ">Aantal slaapkamers</div>
-        <input type="number" name="slaapkamers" id="" <?php echo 'value="'.$result['slaapkamers'].'"'?> max="10" min="0">
-        <div class="label ">Oppervlakte verblijf</div>
-        <input type="number" name="oppervlakte" id="" <?php echo 'value="'.$result['oppervlakte_woning'].'"'?> min="0">
-        <div class="label">Handicap vriendelijk</div>
-        <input type="checkbox" name="handicapvriendelijk" id=""<?php if ($result['handicap_vriendelijk']) {echo "checked";} ?>>
-        <div class="label">Wifi</div>
-        <input type="checkbox" name="wifi" id="">
-        <h2>Admin instellingen</h2>
-        <div class="label">Is advertentie</div>
-        <input type="checkbox" name="isAdvert" id="" <?php if ($result['isAdvert']) {echo "checked";} ?>>
-        <input type="submit" name="update" value="update">
-        <input type="submit" name="delete" value="delete">
+    <form class="" method="post">
+        <div class="advertentie edit-advertentie">
+            <div class="adBanner">
+            </div>
+            <div class="titelRow">
+                <h3><input type="text" name="land" class="w50" id="" <?php echo 'value="'.$result['land'].'"'?> placeholder="Land"> - <input type="text" name="plaats" class="w50" id="" <?php echo 'value="'.$result['plaats'].'"'?>></h3>
+                <h3><input type="number" name="prijs" id="" min="50" <?php echo 'value="'.$result['preis'].'"'?>></h3>
+            </div>
+            <div class="titelRow">
+            <h3><input type="date" name="vertrekDatum" id="" <?php echo 'value="'.$result['vertrekDatum'].'"'?>></h3>
+            <h3><input type="date" name="terugkomstDatum" id="" <?php echo 'value="'.$result['terugkomstDatum'].'"'?>></h3>
+            </div>
+            <p>
+                <textarea name="beschrijving" id="" cols="30" rows="10"><?php echo $result['beschrijving']?></textarea>
+            </p>
+            <table class="edit-list">
+                <tr>
+                    <th class="label">wc's</th>
+                    <th class="label">Aantal slaapkamers</th>
+                    <th class="label">Oppervlakte verblijf</th>
+                    <th class="label">Handicap vriendelijk</th>
+                    <th class="label">Wifi</th>
+                    <th class="label">Is advertentie</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="edit-input" type="number" name="wc" id="" <?php echo 'value="'.$result['wc'].'"'?> max="10" min="0">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="number" name="slaapkamers" id="" <?php echo 'value="'.$result['slaapkamers'].'"'?> max="10" min="0">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="number" name="oppervlakte" id="" <?php echo 'value="'.$result['oppervlakte_woning'].'"'?> min="0">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="checkbox" name="handicapvriendelijk" id=""<?php if ($result['handicap_vriendelijk']) {echo "checked";} ?>>
+                    </td>
+                    <td>
+                        <input class="edit-input" type="checkbox" name="wifi" id="">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="checkbox" name="isAdvert" id="" <?php if ($result['isAdvert']) {echo "checked";} ?>>
+                    </td>
+                </tr>
+                
+            </table>
+                <input type="submit" name="update" value="update">
+                <input type="submit" name="delete" value="delete">
+        </div>
     </form>
 </body>
 
