@@ -18,19 +18,32 @@
     <?php
     require_once('php/config.php');
     require_once('php/nav.php');
-    
+
+    if (isset($_POST['create'])) {
+        $prepared = $conn->prepare("INSERT INTO contact(email,onderwerp,text) VALUES(?,?,?)");
+        $prepared->execute([$_POST['email'], $_POST['onderwerp'], $_POST['text']]); 
+        header("location: feedback-contact.php");
+    }
     ?>
+
+
     <div class="contact-bg-img">
-        
+
     </div>
     <div class="contact-container">
-            <form method="post" action="feedback-contact.php">
-                <h3>E-Mail:</h3><input type="text" name="Naam">
-                <h3>Onderwerp:</h3><input type="text" name="omschrijving">
-                <h3>Text:</h3><textarea name="" id="" cols="90" rows="20"></textarea>
-                <button type="submit" name="submit_button">submit</button>
-            </form>
-        </div>
+
+        <form action="" method="post" id="contactform">
+            <h2 id="contact-text-h2">E-mail</h2>
+            <input type="email" name="email" id="" required>
+            <h2 id="contact-text-h2">Onderwerp</h2>
+            <input type="text" name="onderwerp" id="">
+            <h2 id="contact-text-h2">Text</h2>
+            <textarea type="text" name="text" id="" cols="30" rows="10"></textarea>
+            
+            <h2></h2>
+            <input type="submit" name="create" value="create" style="margin-bottom: 10%">
+        </form>
+    </div>
 </body>
 
 </html>
