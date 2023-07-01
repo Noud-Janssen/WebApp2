@@ -15,16 +15,38 @@
 </head>
 
 <body>
-    <div class="break" style="height: 100px;">
-
-    </div>
-        <h2 class="halfh2">Geboekte reizen</h2>
-    </div>
-    <div class="admin-container" style="margin-top: 0;">
-        <?php 
+    <?php 
         require('php/config.php');
         require_once('php/nav.php');
-       
+
+        if (isset($_POST['verwijder'])) {
+            $prepared = $conn->prepare("DELETE FROM boekingen WHERE boekid = ?");
+            $prepared->execute([$_POST['index']]);
+        }
+    ?>
+    <div class="break" style="height: 100px;">
+    </div>
+    <?php
+        $resultSet = $conn->query(
+            "SELECT *
+        FROM accounts
+        INNER JOIN boekingen
+        ON accounts.id = boekingen.account_id
+        INNER JOIN reizen
+        ON boekingen.reis_id = reizen.id
+        WHERE accounts.id = " . $_SESSION['inlogid'] . ";"
+        );
+        if ($resultSet->fetch()) {
+            echo '<h2 class="halfh2">Geboekte reizen</h2>';
+        } else {
+            echo '<h2 class="halfh2">Er zijn nog geen geboekte reizen.<br>Klik <a href="index.php" style="color: var(--Blue);">hier</a> om reizen te zoeken!</h2>';
+        }
+    ?>
+    
+    <div class="admin-container" style="margin-top: 0; width: 80vw;">
+        <?php 
+        
+
         $resultSet = $conn->query(
             "SELECT *
         FROM accounts
@@ -36,8 +58,8 @@
         );
         while ($result = $resultSet->fetch()) {
             echo
-            ' 
-            <div class="advertentie ticket">
+            '
+            <div class="advertentie ticket boeking-ticket">
                     <div class="adBanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
                     </div>
                     <div class="titelRow">
@@ -49,7 +71,7 @@
                         <h3>'.$result['terugkomstDatum'].'</h3>
                     </div>
                     <form method="post">
-                        <input type="hidden" name="index" value="'.$result['id'].'">
+                        <input type="hidden" name="index" value="'.$result['boekid'].'">
                         <a href="reis-pagina.php?id='.$result['id'].'" class="info-link">Meer informatie</a>
                         <input type="submit" value="annuleer" name="verwijder">
                     </form>
@@ -59,15 +81,17 @@
         ?>
     </div>
     <div class="sideScreen">
-        <?php
-            $resultSet = $conn->query(
-                "SELECT * FROM accounts WHERE id = ".$_SESSION['inlogid'].""
-            );
-            $result = $resultSet->fetch();
-            echo '<h3>Gebruiker: </h3><h3>'.explode("@",$result['email'])[0].'</h3>';
-            echo '<h3>E-mail: </h3><h3>'.$result['email'].'</h3>';
-            echo '<a href="resetPassword.php" class="resetWachtwoord">Reset Wachtwoord</a>'
-        ?>
+        <div class="information-p">
+            <?php
+                $resultSet = $conn->query(
+                    "SELECT * FROM accounts WHERE id = ".$_SESSION['inlogid'].""
+                );
+                $result = $resultSet->fetch();
+                echo '<h3>Gebruiker: </h3><h3>'.explode("@",$result['email'])[0].'</h3>';
+                echo '<h3>E-mail: </h3><h3>'.$result['email'].'</h3>';
+                echo '<a href="resetPassword.php" class="resetWachtwoord">Reset Wachtwoord</a>'
+            ?>
+        </div>
     </div>
 </body>
 

@@ -38,7 +38,6 @@
         
     }
     ?>
-</body style="">
     <form action="" method="post" id="loginForm">
         <h2>E-mail</h2>
         <input type="text" name="email" id="" required>
@@ -49,4 +48,6 @@
         <?php echo "<h3 id='errorLogin'>".$errorMessage."</h3>"?>
         <a href="make-account.php">Maak account</a>
     </form>
+</body style="">
+    
 </html>

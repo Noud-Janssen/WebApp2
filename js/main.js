@@ -42,3 +42,14 @@ function createAccount() {
         alert("Account aangemaakt");
     }
 }
+
+function resetPassword() {
+    let wwVeld1 = document.querySelector("#password").value;
+    let wwVeld2 = document.querySelector("#password2").value;
+    if (wwVeld1 != wwVeld2) {
+        alert("Voer hetzelfde wachtwoord in");
+        return false;
+    } else {
+        alert("Wachtwoord veranderd");
+    }
+}
