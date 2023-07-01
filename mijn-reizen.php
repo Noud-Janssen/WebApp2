@@ -15,7 +15,12 @@
 </head>
 
 <body>
-    <div class="admin-container">
+    <div class="break" style="height: 100px;">
+
+    </div>
+        <h2 class="halfh2">Geboekte reizen</h2>
+    </div>
+    <div class="admin-container" style="margin-top: 0;">
         <?php 
         require('php/config.php');
         require_once('php/nav.php');
@@ -32,16 +37,36 @@
         while ($result = $resultSet->fetch()) {
             echo
             ' 
-            <div href="reis-pagina.php?id='.$result['id'].'" class="mijn-reizen-reis-item adBanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
-                <div class="mijn-reizen-head-text">
-                    <h2 id="mijn-reizen-land-plaats-text">' . $result['land'] . ', ' . $result['plaats'] . '</h2>
+            <div class="advertentie ticket">
+                    <div class="adBanner" style="background-image: url(assets/images/'.strtolower($result['land']).'bg.jpg)">
+                    </div>
+                    <div class="titelRow">
+                        <h3>'.$result['land'].' - '.$result['plaats'].'</h3>
+                        <h3>€'.$result['preis'].'</h3>
+                    </div>
+                    <div class="titelRow">
+                        <h3>'.$result['vertrekDatum'].'</h3>
+                        <h3>'.$result['terugkomstDatum'].'</h3>
+                    </div>
+                    <form method="post">
+                        <input type="hidden" name="index" value="'.$result['id'].'">
+                        <a href="reis-pagina.php?id='.$result['id'].'" class="info-link">Meer informatie</a>
+                        <input type="submit" value="annuleer" name="verwijder">
+                    </form>
                 </div>
-                <div class="mijn-reizen-button-wrapper">
-                    <a class="mijn-reizen-annuleer-link" href="annuleer.php?id=' . $result['boekid'] . '">Annuleren</a>
-                </div>
-            </div>
            ';
         }
+        ?>
+    </div>
+    <div class="sideScreen">
+        <?php
+            $resultSet = $conn->query(
+                "SELECT * FROM accounts WHERE id = ".$_SESSION['inlogid'].""
+            );
+            $result = $resultSet->fetch();
+            echo '<h3>Gebruiker: </h3><h3>'.explode("@",$result['email'])[0].'</h3>';
+            echo '<h3>E-mail: </h3><h3>'.$result['email'].'</h3>';
+            echo '<a href="resetPassword.php" class="resetWachtwoord">Reset Wachtwoord</a>'
         ?>
     </div>
 </body>

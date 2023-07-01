@@ -15,7 +15,7 @@ nav > .link-row > a {
 #accountButton {
     text-decoration: none;
     color: var(--White);
-    font-size: 2vw;
+    font-size: 16px;
     width: 200px;
     cursor: pointer;
     text-align: center;
@@ -330,13 +330,20 @@ nav > .link-row > a {
 .ticket > form {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    height: 20%;
 }
 
 .ticket > form > input {
     border: none;
     color: var(--Red);
+}
+
+.ticket > form > a {
+    color: var(--Blue);
+    font-size: 13px;
 }
 
 .sideSum {
@@ -380,4 +387,39 @@ nav > .link-row > a {
 .sideSum > form > input {
     border: none;
     font-size: 18px;
+}
+
+.halfh2 {
+    width: 50%;
+    margin-top: 20px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: calc(30vw - 24%);
+}
+
+.sideScreen {
+    position: fixed;
+    top: 12vh;
+    height: 88vh;
+    width: calc(40vw - 2 * 30px);
+    background-color: var(--White);
+    box-shadow: var(--shadow);
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.sideScreen > h3 {
+    width: 50%;
+    font-size: 16px;
+}
+
+.resetWachtwoord {
+    color: var(--Red);
+    font-size: 16px;
 }

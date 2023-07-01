@@ -95,11 +95,11 @@ nav > h1 {
 .link-row {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 40%;
 }
 
 .link-row > a {
-    font-size: 2vw;
+    font-size: 16px;
     
 }
 
