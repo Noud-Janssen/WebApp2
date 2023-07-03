@@ -42,17 +42,20 @@
 #feedback-contact-titel {
     color: #080708;
 }
-textarea{
+
+textarea {
     width: 200px;
     height: 100px;
 
 }
-#contact-text-h2{
+
+#contact-text-h2 {
     color: #080708;
     display: flex;
     justify-content: baseline;
 }
-#contact-input-text{
+
+#contact-input-text {
     display: flex;
     justify-content: baseline;
     height: auto;
@@ -181,7 +184,8 @@ ul li::before {
     border-bottom: var(--Blue)solid 2px;
 
 }
-.reis-pagina-link-container{
+
+.reis-pagina-link-container {
     display: flex;
     flex-direction: row;
 }
@@ -340,6 +344,7 @@ tr:nth-child(even) {
     align-items: center;
     color: var(--Red);
 }
+
 #admin-boekingen-button {
     border-radius: 12px;
     display: flex;
@@ -497,15 +502,45 @@ tr:nth-child(even) {
 
 /* recensies */
 
-.ster{
+.ster {
     height: 50px;
     width: 50px;
 }
-.ster > input{
+
+.ster>input {
     height: 50px;
     width: 50px;
     background-image: url(../assets/images/ster.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain    ;
+    background-size: contain;
+}
+
+/* admin tussenstop */
+.admin-tussenstop-container {
+    display: flex;
+    width: auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-tussenstop-reizen {
+    display: flex;
+    width: 40vw;
+    height: 70vh;
+}
+
+.admin-tussenstop-link{
+    color: #080708;
+    margin: 20px;
+    border: #FFD23F solid 3px;
+    height: 10vh;
+    width: 11vw;
+    border-radius: 12px;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 10vh;
+    margin-top: 200px;
 }

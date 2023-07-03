@@ -239,8 +239,8 @@ nav > .link-row > a {
 .edit-container > .label {
     display: flex;
     align-items: flex-end;
-    border-bottom: var(--Black) 2px solid;
-    width: 60%;
+    border-bottom: #FFD23F 2px solid;
+    width: 45%;
 }
 
 .edit-container > textarea {
