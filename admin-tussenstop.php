@@ -20,7 +20,7 @@
         <div class="admin-tussenstop-reizen">
             <a class="admin-tussenstop-link" href="admin-add.php">Maak een reis</a>
             <a class="admin-tussenstop-link" href="admin-panel.php">Admin Panel</a>
-            <a class="admin-tussenstop-link" href="admin-email.php">Email</a>
+            <a class="admin-tussenstop-link" href="admin-email.php">E-mail</a>
         </div>
     </div>
 
