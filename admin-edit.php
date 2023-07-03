@@ -81,12 +81,12 @@
             <div class="adBanner">
             </div>
             <div class="titelRow">
-                <h3><input type="text" name="land" class="w50" id="" <?php echo 'value="'.$result['land'].'"'?> placeholder="Land"> - <input type="text" name="plaats" class="w50" id="" <?php echo 'value="'.$result['plaats'].'"'?>></h3>
-                <h3><input type="number" name="prijs" id="" min="50" <?php echo 'value="'.$result['preis'].'"'?>></h3>
+                <h3><input type="text" name="land" class="w50 h3-input" id="" class="h3-input" <?php echo 'value="'.$result['land'].'"'?> placeholder="Land"> - <input type="text" name="plaats" class="w50 h3-input" id="" <?php echo 'value="'.$result['plaats'].'"'?>></h3>
+                <h3><input type="number" name="prijs" id="" min="50" class="h3-input" style="text-align: right;" <?php echo 'value="'.$result['preis'].'"'?>></h3>
             </div>
             <div class="titelRow">
-            <h3><input type="date" name="vertrekDatum" id="" <?php echo 'value="'.$result['vertrekDatum'].'"'?>></h3>
-            <h3><input type="date" name="terugkomstDatum" id="" <?php echo 'value="'.$result['terugkomstDatum'].'"'?>></h3>
+            <h3><input type="date" name="vertrekDatum" id="" class="h3-input" <?php echo 'value="'.$result['vertrekDatum'].'"'?>></h3>
+            <h3><input type="date" name="terugkomstDatum" id="" class="h3-input" <?php echo 'value="'.$result['terugkomstDatum'].'"'?>></h3>
             </div>
             <p>
                 <textarea name="beschrijving" id="" cols="30" rows="10"><?php echo $result['beschrijving']?></textarea>
@@ -122,8 +122,11 @@
                 </tr>
                 
             </table>
-                <input type="submit" name="update" value="update">
-                <input type="submit" name="delete" value="delete">
+            <div class="submit-row">
+                <input type="submit" class="firstSubmit" name="update" value="update">
+                <input type="submit" class="secondSubmit" name="delete" value="delete">
+            </div>
+                
         </div>
     </form>
 </body>

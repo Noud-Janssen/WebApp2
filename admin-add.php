@@ -66,36 +66,58 @@
         }
 
     ?>
-    <form class="edit-container" method="post">
-        <h2>Basis informatie</h2>
-        <div class="label">Land</div>
-        <input type="text" name="land" class="w50" id="" value="">
-        <div class="label">Plaats</div>
-        <input type="text" name="plaats" class="w50" id="" >
-        <div class="label">Prijs</div>
-        <input type="number" name="prijs" id="" min="50" >
-        <div class="label">Beschrijving</div>
-        <textarea name="beschrijving" id="" cols="30" rows="10"></textarea>
-        <h2>Datums</h2>
-        <div class="label">Vertrek datum</div>
-        <input type="date" name="vertrekDatum" id="">
-        <div class="label">Terugkomst datum</div>
-        <input type="date" name="terugkomstDatum" id="">
-        <h2>Voorzieningen</h2>
-        <div class="label ">Aantal wc's</div>
-        <input type="number" name="wc" id=""  max="10" min="0">
-        <div class="label ">Aantal slaapkamers</div>
-        <input type="number" name="slaapkamers" id=""  max="10" min="0">
-        <div class="label ">Oppervlakte verblijf</div>
-        <input type="number" name="oppervlakte" id=""  min="0">
-        <div class="label">Handicap vriendelijk</div>
-        <input type="checkbox" name="handicapvriendelijk" id="">
-        <div class="label">Wifi</div>
-        <input type="checkbox" name="wifi" id="">
-        <h2>Admin instellingen</h2>
-        <div class="label">Is advertentie</div>
-        <input type="checkbox" name="isAdvert" id="" >
-        <input type="submit" name="create" value="create">
+    <div class="break"></div>
+    <form class="" method="post">
+        <div class="advertentie edit-advertentie">
+            <div class="adBanner">
+            </div>
+            <div class="titelRow">
+                <h3><input type="text" name="land" class="w50 h3-input" id="" class="h3-input" placeholder="Land"> - <input type="text" name="plaats" class="w50 h3-input" id="" placeholder="Plaats"></h3>
+                <h3><input type="number" name="prijs" id="" min="50" class="h3-input" style="text-align: right;" placeholder="€ Prijs"></h3>
+            </div>
+            <div class="titelRow">
+            <h3><input type="date" name="vertrekDatum" id="" class="h3-input" placeholder="vertrek datum"></h3>
+            <h3><input type="date" name="terugkomstDatum" id="" class="h3-input"></h3>
+            </div>
+            <p>
+                <textarea name="beschrijving" id="" cols="30" rows="10" placeholder="Beschrijving"></textarea>
+            </p>
+            <table class="edit-list">
+                <tr>
+                    <th class="label">wc's</th>
+                    <th class="label">Aantal slaapkamers</th>
+                    <th class="label">Oppervlakte verblijf</th>
+                    <th class="label">Handicap vriendelijk</th>
+                    <th class="label">Wifi</th>
+                    <th class="label">Is advertentie</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="edit-input" type="number" name="wc" id="" max="10" min="0">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="number" name="slaapkamers" id=""  max="10" min="0">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="number" name="oppervlakte" id=""  min="0">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="checkbox" name="handicapvriendelijk" id="">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="checkbox" name="wifi" id="">
+                    </td>
+                    <td>
+                        <input class="edit-input" type="checkbox" name="isAdvert" id="">
+                    </td>
+                </tr>
+                
+            </table>
+            <div class="submit-row">
+                <input type="submit" class="firstSubmit" name="create" value="create">
+            </div>
+                
+        </div>
     </form>
 </body>
 

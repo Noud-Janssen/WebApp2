@@ -137,6 +137,7 @@ nav > .link-row > a {
     border: none;
     border-bottom: 1px solid var(--Gray);
     border-radius: 0;
+    text-align: right !important; 
 }
 
 .inputWrapper > input[type=text] {
@@ -460,14 +461,12 @@ nav > .link-row > a {
   }
 
 .advertentie > .titelRow > h3 > input {
-    border: none;
     width: 70px;
     text-align: left;
     border-radius: 0;
 }
 
 .advertentie > .titelRow > h3 > input[type=date] {
-    border: none;
     width: 110px;
     border-radius: 0;
 }
@@ -496,7 +495,7 @@ nav > .link-row > a {
     margin-right: 10%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
 }
 
 .edit-list > tr > th {
@@ -506,12 +505,28 @@ nav > .link-row > a {
     background: none;
 }
 
+.edit-list > tbody > tr > td > input {
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.edit-list > tbody > tr > td > input:focus {
+    border: 2px solid var(--Blue);
+}
+
 .edit-list > tbody > tr {
     background-color: var(--White) !important;
 }
 
 .edit-list > input[type=submit] {
     width: 10%;
+}
+
+.h3-input {
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.h3-input:focus {
+    border: 2px solid var(--Blue);
 }
 
 .edit-input {
@@ -524,4 +539,22 @@ nav > .link-row > a {
 
 .edit-input:focus {
     color: var(--Black);
+}
+
+.submit-row {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.submit-row > input[type=submit] {
+    width: 30%;
+    border-radius: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.secondSubmit {
+    color: var(--Red);
 }
